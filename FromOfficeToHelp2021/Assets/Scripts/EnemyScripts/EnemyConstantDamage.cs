@@ -15,12 +15,13 @@ public class EnemyConstantDamage : MonoBehaviour
     public int interactiveActions;
     public float slowdownAmount;
     public bool slowedDown;
-    public EnemyHealth enemyLife;
+    private EnemyHealth enemyLife;
     CharacterMovement targetMovement;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyLife = gameObject.GetComponent<EnemyHealth>();
         target = GameObject.Find("Character");
         targetMovement = target.GetComponent<CharacterMovement>();
     }
@@ -28,8 +29,9 @@ public class EnemyConstantDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyLife.currentHitPoints <= 0)
+        if (enemyLife.currentHitPoints <= 0f)
         {
+            slowedDown = false;
             targetMovement.SpeedVariation(0f);
         }
 

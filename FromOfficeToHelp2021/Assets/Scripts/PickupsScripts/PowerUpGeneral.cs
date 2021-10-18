@@ -5,30 +5,25 @@ using UnityEngine;
 public class PowerUpGeneral : MonoBehaviour
 {
     public CharacterHealth life;
-    public int healingAmount;
+    public float healingAmount;
     public GameObject target;
 
 
-    private void OnTriggerEnter(Collider target)
+    public void OnTriggerEnter(Collider target)
     {
         HealthUp();
         Destroy(gameObject);
     }
 
-    private void Start()
+    public void Start()
     {
         CharacterHealth healthbar = target.GetComponent<CharacterHealth>();
         life = healthbar;
     }
     public void HealthUp()
     {
-        life.SendMessage("Heal", healingAmount);
+        //life.SendMessage("Heal", healingAmount);
+        life.Heal(healingAmount);
     }
 
-    //public void HealthUp()
-    //{
-    //    CharacterHealth life = gameObject.GetComponent<CharacterHealth>();
-    //    //healingAmount = amount;
-    //    life.Heal(healingAmount);
-    //}
 }
