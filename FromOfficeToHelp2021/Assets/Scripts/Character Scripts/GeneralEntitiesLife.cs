@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GeneralEntitiesLife : MonoBehaviour
 {
-    public int baseHitPoints;
-    public int currentHitPoints;
+    public float baseHitPoints;
+    public float currentHitPoints;
     public bool startChronometer;
     public float chronometer;
     public float limitChronometer;
@@ -32,7 +32,7 @@ public class GeneralEntitiesLife : MonoBehaviour
     }
 
 
-    public virtual void TakeDamage(int amount)
+    public virtual void TakeDamage(float amount)
     {
         //Toma el daño de un golpe y lo resta a la vida, es virtual para que se pueda modificar en el script del personaje y se actualice el UI de la barra de vida
 

@@ -9,41 +9,42 @@ public class CharacterHealth : GeneralEntitiesLife
     public Image healthBar;
     public GameObject defeatUI;
     public Animation anim;
-
-    public override void TakeDamage(int amount)
+    public override void TakeDamage(float amount)
     {
         //Ejecuta normalmente el TakeDamage, pero se le agrega la actualizacion de la barra de vida
 
+        //base.TakeDamage(amount);
+        //if (healthBar)
+        //{
+        //    healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
+        //}
         base.TakeDamage(amount);
-        if (healthBar)
-        {
-            healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
-        }
+                currentHitPoints = Mathf.Clamp(currentHitPoints - amount, 0f, baseHitPoints);
+                healthBar.transform.localScale = new Vector2(currentHitPoints / baseHitPoints, 1);
+            
     }
 
-    public void Heal(int amount)
+    public void Heal(float amount)
     {
         //Curacion del personaje
 
         if (amount > 0 && currentHitPoints < baseHitPoints)
         {
             currentHitPoints += amount;
-            if (currentHitPoints > baseHitPoints)
+            if (currentHitPoints > 0) //condición para no pasarnos del máximo
             {
-                currentHitPoints = baseHitPoints;
-                healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
+                if (currentHitPoints > baseHitPoints)
+                    currentHitPoints = baseHitPoints;
+                currentHitPoints = Mathf.Clamp(currentHitPoints + amount, 0f, baseHitPoints);
+                healthBar.transform.localScale = new Vector2(currentHitPoints / baseHitPoints, 1);
             }
         }
     }
 
     public override void ZeroLife()
     {
-        //Animacion de muerte 
-
-    }
-
-    public override void Death()
-    {
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Defeat");
         //Va a la pantalla de derrota
     }
 

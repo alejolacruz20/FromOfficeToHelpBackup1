@@ -12,8 +12,6 @@ public class DashController : MonoBehaviour
     public float current_dashTimer;
     public bool canDash;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         MoveScript = GetComponent<CharacterMovement>();
@@ -27,7 +25,7 @@ public class DashController : MonoBehaviour
         {
             canDash = true;
         }
-        
+
         if (Input.GetButtonDown("Jump"))
         {
             StartCoroutine(Dash());
