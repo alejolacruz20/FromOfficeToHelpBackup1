@@ -10,10 +10,14 @@ public class EnemyHealth : GeneralEntitiesLife
     public override void ZeroLife()
     {
         if (randomMovement != null)
-            Destroy(this.gameObject);
+        {
+            anim.SetBool("Freedom", true);
+            base.Death();
+        }
         else if (mywaypoints != null)
-            Destroy(this.gameObject);
-        base.ZeroLife();
+        {
+            anim.SetBool("Freedom", true);
+            base.Death();
+        }
     }
-
 }

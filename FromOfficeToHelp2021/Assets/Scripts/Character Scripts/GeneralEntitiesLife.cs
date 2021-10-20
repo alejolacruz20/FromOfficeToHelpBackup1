@@ -60,6 +60,6 @@ public class GeneralEntitiesLife : MonoBehaviour
     {
         //Cuando el timer para se llama a esta funcion para destruir a la entidad o cambiar de escena en el caso del player
 
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, limitChronometer);
     }
 }

@@ -6,6 +6,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
 {
     public GameObject bullet;
     public Transform[] bulletSpawner;
+    public int currentHappyPoints;
     //public string buttonName = "Fire 1";
     public bool doingTheAnimation;
     public Animator characterAnimator;

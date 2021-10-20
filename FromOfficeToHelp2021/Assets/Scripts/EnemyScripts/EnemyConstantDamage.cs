@@ -69,7 +69,7 @@ public class EnemyConstantDamage : MonoBehaviour
         {
             case 0:
                 //Debug.Log("Relentizado");
-                if (slowedDown == false)
+                if (slowedDown == false && enemyLife.currentHitPoints > 0)
                 {
                     //Bullet targetMovement = target.GetComponent<Bullet>();
                     targetMovement.SpeedVariation(slowdownAmount);
@@ -82,7 +82,7 @@ public class EnemyConstantDamage : MonoBehaviour
 
             case 1:
                 //Debug.Log(damage + " de Daño"); 
-                if (slowedDown == false)
+                if (slowedDown == false && enemyLife.currentHitPoints > 0)
                 {
                     //Bullet targetMovement = target.GetComponent<Bullet>();
                     targetMovement.SpeedVariation(slowdownAmount);

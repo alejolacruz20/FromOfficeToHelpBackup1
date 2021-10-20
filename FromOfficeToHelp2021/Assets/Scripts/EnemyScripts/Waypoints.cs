@@ -7,7 +7,7 @@ public class Waypoints : MonoBehaviour
 {
     public Transform[] waypoints;
     public int speed;
-    private int _waypointIndex;
+    protected int _waypointIndex;
     public float dist;
     public bool fightingPlayer = false;
     public GameObject playerTarget;
@@ -21,7 +21,7 @@ public class Waypoints : MonoBehaviour
         transform.LookAt(waypoints[_waypointIndex].position);
     }
 
-    public void Update()
+    public virtual void Update()
     {
         dist = Vector3.Distance(transform.position, waypoints[_waypointIndex].position);
         if (dist < 1f)
@@ -32,7 +32,7 @@ public class Waypoints : MonoBehaviour
         IsFighting();
     }
 
-    public void IsFighting()
+    public virtual void IsFighting()
     {
         if (Vector3.Distance(playerTarget.transform.position, transform.position) > minDistance)
         {
@@ -53,7 +53,7 @@ public class Waypoints : MonoBehaviour
         }
     }
 
-    public void EndAnimation()
+    public virtual void EndAnimation()
     {
         anim.SetBool("PlayerAttack", false);
         fightingPlayer = false;
@@ -71,9 +71,14 @@ public class Waypoints : MonoBehaviour
             _waypointIndex++;
             if (_waypointIndex >= waypoints.Length)
             {
-                _waypointIndex = 0;
+                MaxIndex();
             }
             transform.LookAt(waypoints[_waypointIndex].position);
         }
+    }
+
+    public virtual void MaxIndex()
+    {
+        _waypointIndex = 0;
     }
 }
