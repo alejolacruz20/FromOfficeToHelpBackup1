@@ -21,6 +21,11 @@ public class GeneralEntitiesLife : MonoBehaviour
         //Este chronometer es para dar tiempo a la entidad de hacer una animacion y despues destruirse, pero si hay algun problema o les gusta mas
         //tambien se puede hacer en la animacion de muerte del personaje o del enemigo, haciendo que al final de la animacion llame un evento de destruccion o de cambio de escena
 
+        if (currentHitPoints <= 0)
+        {
+            ZeroLife();
+        }
+
         if (startChronometer == true)
         {
             chronometer += Time.deltaTime;
@@ -40,10 +45,10 @@ public class GeneralEntitiesLife : MonoBehaviour
         {
             currentHitPoints -= amount;
 
-            if (currentHitPoints <= 0)
-            {
-                ZeroLife();
-            }
+            //if (currentHitPoints <= 0)
+            //{
+            //    ZeroLife();
+            //}
 
         }
 

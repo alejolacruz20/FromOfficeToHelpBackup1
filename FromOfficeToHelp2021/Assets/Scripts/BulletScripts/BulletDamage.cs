@@ -7,6 +7,7 @@ public class BulletDamage : GeneralHit
     //Por la herencia tiene el OntriggerEnter 
     //Lo unico que se agrega aca es el movimiento de la bala
     public float speed;
+
     public override void OnTriggerEnter(Collider target)
     {
         base.OnTriggerEnter(target);
