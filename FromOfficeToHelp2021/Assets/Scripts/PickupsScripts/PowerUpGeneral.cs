@@ -7,19 +7,40 @@ public class PowerUpGeneral : MonoBehaviour
     public CharacterHealth life;
     public float healingAmount;
     public GameObject target;
+    public CharacterAnimationInteraction characterShooting;
 
 
     public void OnTriggerEnter(Collider target)
     {
-        HealthUp();
-        Destroy(gameObject);
+        //HealthUp();
+        //Destroy(gameObject);
+        if (target.CompareTag("Player"))
+        {
+            if (life != null)
+            {
+                HealthUp();
+            }
+            else if (characterShooting != null)
+            {
+                SpeedShoot();
+            }
+
+            Destroy(gameObject);
+        }
+
     }
 
     public void Start()
     {
-        CharacterHealth healthbar = target.GetComponent<CharacterHealth>();
-        life = healthbar;
+        //CharacterHealth healthbar = target.GetComponent<CharacterHealth>();
+        //life = healthbar;
     }
+
+    public void SpeedShoot()
+    {
+        characterShooting.speedShooting = true;
+    }
+
     public void HealthUp()
     {
         //life.SendMessage("Heal", healingAmount);
