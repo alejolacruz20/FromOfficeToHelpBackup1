@@ -9,6 +9,8 @@ public class CharacterHealth : GeneralEntitiesLife
     public Image healthBar;
     public GameObject defeatUI;
     public Animation anim;
+
+
     public override void TakeDamage(float amount)
     {
         //Ejecuta normalmente el TakeDamage, pero se le agrega la actualizacion de la barra de vida
@@ -19,9 +21,10 @@ public class CharacterHealth : GeneralEntitiesLife
         //    healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
         //}
         base.TakeDamage(amount);
-                currentHitPoints = Mathf.Clamp(currentHitPoints - amount, 0f, baseHitPoints);
-                healthBar.transform.localScale = new Vector2(currentHitPoints / baseHitPoints, 1);
-            
+        currentHitPoints = Mathf.Clamp(currentHitPoints - amount, 0f, baseHitPoints);
+        healthBar.transform.localScale = new Vector2(currentHitPoints / baseHitPoints, 1);
+        FindObjectOfType<AudioManager>().Play("CharacterDMG");
+
     }
 
     public void Heal(float amount)
@@ -37,6 +40,7 @@ public class CharacterHealth : GeneralEntitiesLife
                     currentHitPoints = baseHitPoints;
                 currentHitPoints = Mathf.Clamp(currentHitPoints + amount, 0f, baseHitPoints);
                 healthBar.transform.localScale = new Vector2(currentHitPoints / baseHitPoints, 1);
+
             }
         }
     }

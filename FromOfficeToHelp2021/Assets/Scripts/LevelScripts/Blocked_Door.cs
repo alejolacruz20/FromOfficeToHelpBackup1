@@ -45,7 +45,12 @@ public class Blocked_Door : MonoBehaviour
         else
         {
             anim.SetBool("abierta", false);
+        }
 
+        if (inside && Input.GetKeyDown(KeyCode.E) && taken == false)
+        {
+            FindObjectOfType<AudioManager>().Play("Blocked Door");
+            anim.SetBool("abierta", false);
         }
     }  
 }
