@@ -18,5 +18,4 @@ public class BulletDamage : GeneralHit
     {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
-
 }

@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class ParticleSpawner : MonoBehaviour
 {
-    public ParticleSystem damageParticles;
-    public Transform[] bulletParticlePoints;
+    public ParticleSystem hitParticles;
+    public Transform bulletParticlePoints;
+
+    public void Start()
+    {
+        bulletParticlePoints = GetComponent<Transform>();
+    }
 
     private void OnTriggerEnter(Collider target)
     {
-        if (target.CompareTag("PlayerBullet"))
-        {
-            Particles(); 
-        }
+        Particles(); 
     }
    
     public void Particles()
     {
-        for (int i = 0; i < bulletParticlePoints.Length; i++)
-        {
-            Instantiate(damageParticles, bulletParticlePoints[i].position, bulletParticlePoints[i].rotation);
-        }
+        Instantiate(hitParticles, bulletParticlePoints.position, bulletParticlePoints.rotation);
     }
 }

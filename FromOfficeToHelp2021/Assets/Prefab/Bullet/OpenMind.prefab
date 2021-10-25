@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3029094151529386832}
   - component: {fileID: -1360789436394818414}
   - component: {fileID: 6036137990999894774}
-  - component: {fileID: 4936833205086926291}
+  - component: {fileID: 5423163198493306730}
   m_Layer: 11
   m_Name: OpenMind
   m_TagString: PlayerBullet
@@ -34,7 +34,6 @@ Transform:
   m_Children:
   - {fileID: 3947680425978601971}
   - {fileID: 564566097386976302}
-  - {fileID: 7718158032534330390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -119,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   speed: 25
---- !u!114 &4936833205086926291
+--- !u!114 &5423163198493306730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,38 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3420efb2284680448baf0786fcf507e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionParticles: {fileID: 1150598288704605545, guid: ed909f18c26472940b83007001f36d7b,
+  hitParticles: {fileID: 1513672173263248786, guid: 2d060898fc0d5c34b9e454de74e169cc,
     type: 3}
---- !u!1 &2599969024711476785
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7718158032534330390}
-  m_Layer: 11
-  m_Name: ParticleSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7718158032534330390
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2599969024711476785}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1697754463111534453}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  bulletParticlePoints: {fileID: 1697754463111534453}
 --- !u!1 &8055747341986026918
 GameObject:
   m_ObjectHideFlags: 0
