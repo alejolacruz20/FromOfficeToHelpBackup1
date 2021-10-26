@@ -6,19 +6,24 @@ public class EnemyHealth : GeneralEntitiesLife
 {
     public Animator anim;
     public RandomMovement randomMovement;
-    public Waypoints mywaypoints;
+    public Waypoints waypointsMovement;
 
     public override void ZeroLife()
     {
         if (randomMovement != null)
         {
-            anim.SetBool("Freedom", true);
-            base.Death();
+            randomMovement.enabled = false;
+            //anim.SetBool("Freedom", true);
+            //base.Death();
         }
-        else if (mywaypoints != null)
+        else if (waypointsMovement != null)
         {
-            anim.SetBool("Freedom", true);
-            base.Death();
+            waypointsMovement.enabled = false;
+            //anim.SetBool("Freedom", true);
+            //base.Death();
         }
+
+        anim.SetBool("Freedom", true);
+        base.Death();
     }
 }

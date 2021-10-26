@@ -10,9 +10,13 @@ public class CharacterMovement : MonoBehaviour
     public float baseSpeed = 12f;
     public float speed;
     public Vector3 MoveDirection;
+    public Animator camaraAnimator;
+
+
     private void Start()
     {
         speed = baseSpeed;
+        camaraAnimator.SetBool("ShakeCamera", false);
     }
 
     public void SpeedVariation(float amount) //Pedimos un valor para saber cuanta velocidad tenemos
@@ -20,10 +24,12 @@ public class CharacterMovement : MonoBehaviour
         if (amount > 0f)
         {
             speed -= baseSpeed * amount;
+            camaraAnimator.SetBool("ShakeCamera", true);
         }
         else
         {
             speed = baseSpeed;
+            camaraAnimator.SetBool("ShakeCamera", false);
         }
     }
 
