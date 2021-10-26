@@ -9,6 +9,13 @@ public class CharacterHealth : GeneralEntitiesLife
     public Image healthBar;
     public GameObject defeatUI;
     public Animation anim;
+    public Image mascaraDaño;
+
+    private void Update()
+    {
+        float valorAlfa = 1f / baseHitPoints * (baseHitPoints - currentHitPoints);
+        mascaraDaño.color = new Color(1, 1, 1, valorAlfa);
+    }
 
 
     public override void TakeDamage(float amount)
@@ -40,7 +47,6 @@ public class CharacterHealth : GeneralEntitiesLife
                     currentHitPoints = baseHitPoints;
                 currentHitPoints = Mathf.Clamp(currentHitPoints + amount, 0f, baseHitPoints);
                 healthBar.transform.localScale = new Vector2(currentHitPoints / baseHitPoints, 1);
-
             }
         }
     }
