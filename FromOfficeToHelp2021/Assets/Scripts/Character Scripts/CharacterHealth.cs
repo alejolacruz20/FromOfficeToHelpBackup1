@@ -10,6 +10,7 @@ public class CharacterHealth : GeneralEntitiesLife
     public GameObject defeatUI;
     public Animation anim;
     public Image mascaraDaño;
+    public Animator mascaraAnim;
 
     private void Update()
     {
