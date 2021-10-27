@@ -10,6 +10,7 @@ public class CharacterHealth : GeneralEntitiesLife
     public GameObject defeatUI;
     public Animator anim;
     public Image mascaraDaño;
+    public Animator UIanim;
 
 
     public override void Update()
@@ -53,6 +54,7 @@ public class CharacterHealth : GeneralEntitiesLife
 
     public override void ZeroLife()
     {
+        UIanim.SetBool("Transition", true);
         anim.SetBool("Death", true);
         base.ZeroLife();
         //Cursor.lockState = CursorLockMode.None;

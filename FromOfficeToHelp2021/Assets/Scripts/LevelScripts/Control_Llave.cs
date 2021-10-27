@@ -33,6 +33,7 @@ public class Control_Llave : MonoBehaviour
         if(inside && Input.GetKeyDown(KeyCode.E))
         {
             Blocked_Door.taken = true;
+            FindObjectOfType<AudioManager>().Play("Pickup");
             rend.gameObject.SetActive(false);
         }
     }

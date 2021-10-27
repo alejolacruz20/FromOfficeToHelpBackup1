@@ -19,6 +19,7 @@ public class Buttons : MonoBehaviour
         if (target.gameObject.CompareTag("PlayerBullet"))
         {
             activated = true;
+            FindObjectOfType<AudioManager>().Play("PressButton");
             rend.material.SetColor("_Color", Color.green);
         }
     }

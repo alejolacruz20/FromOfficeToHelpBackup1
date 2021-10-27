@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
     {
         Play("Ambiente");
         Play("MusicLVL1");
+        Play("ElevatorRingBell");
     }
 
     public void Play (string name)

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class SceneChanger : MonoBehaviour
 {
     public bool victory = false;
+    public Animator uiAnim;
     //public Transform myTransform;
     //public GameObject myPlayer;
 
@@ -15,6 +16,7 @@ public class SceneChanger : MonoBehaviour
     {
         if (target.tag == "Player")
         {
+            uiAnim.SetBool("Transition", true);
             //victory = true;
             //myPlayer.transform.position = myTransform.transform.position;
             Cursor.lockState = CursorLockMode.None;
