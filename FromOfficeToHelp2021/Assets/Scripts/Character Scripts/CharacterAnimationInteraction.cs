@@ -45,6 +45,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
             speedShootingChronometer += Time.deltaTime;
             if (speedShootingChronometer >= speedShootingChronometerLimit)
             {
+                characterAnimator.SetBool("SpeedShoot", false);
                 speedShooting = false;
                 speedShootingChronometer = 0;
             }
@@ -79,14 +80,18 @@ public class CharacterAnimationInteraction : MonoBehaviour
         }
         else
         {
+            characterAnimator.SetBool("SpeedShoot", false);
+
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 //Hacer animacion de levantar el brazo, que cuando termina pasa a brazo extendido
-                //characterAnimator.SetBool("Attack", true);
+                characterAnimator.SetBool("SpeedShoot", true);
             }
 
             if (Input.GetKey(KeyCode.Mouse1))
             {
+                characterAnimator.SetBool("SpeedShoot", true);
+
                 for (int i = 0; i < bulletSpawner.Length; i++)
                 {
                     Instantiate(bullet, bulletSpawner[i].position, bulletSpawner[i].rotation);
@@ -98,8 +103,10 @@ public class CharacterAnimationInteraction : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
                 //vuelve a idle
+                characterAnimator.SetBool("SpeedShoot", false);
             }
         }
+
     }
 
     public void AnimationShooting()

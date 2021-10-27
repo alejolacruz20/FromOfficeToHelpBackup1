@@ -24,6 +24,6 @@ public class EnemyHealth : GeneralEntitiesLife
         }
 
         anim.SetBool("Freedom", true);
-        base.Death();
+        base.ZeroLife();
     }
 }

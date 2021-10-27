@@ -16,7 +16,7 @@ public class GeneralEntitiesLife : MonoBehaviour
         currentHitPoints = baseHitPoints;
     }
 
-    private void Update()
+    public virtual void Update()
     {
         //Este chronometer es para dar tiempo a la entidad de hacer una animacion y despues destruirse, pero si hay algun problema o les gusta mas
         //tambien se puede hacer en la animacion de muerte del personaje o del enemigo, haciendo que al final de la animacion llame un evento de destruccion o de cambio de escena
@@ -64,7 +64,6 @@ public class GeneralEntitiesLife : MonoBehaviour
     public virtual void Death()
     {
         //Cuando el timer para se llama a esta funcion para destruir a la entidad o cambiar de escena en el caso del player
-
-        Destroy(this.gameObject, limitChronometer);
+        Destroy(this.gameObject);
     }
 }
