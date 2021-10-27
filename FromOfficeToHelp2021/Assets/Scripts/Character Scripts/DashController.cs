@@ -11,10 +11,12 @@ public class DashController : MonoBehaviour
     public float dash_Timer;
     public float current_dashTimer;
     public bool canDash;
+    public Animator anim;
 
     void Start()
     {
         MoveScript = GetComponent<CharacterMovement>();
+        anim.SetBool("Dash", false);
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class DashController : MonoBehaviour
             canDash = false;
             dash_Timer = 0f;
             float StartTime = Time.time;
+            anim.SetBool("Dash", true);
             FindObjectOfType<AudioManager>().Play("Dash"); //Reproducimos el sonido
             while (Time.time < StartTime + DashTime)
             {
@@ -46,6 +49,8 @@ public class DashController : MonoBehaviour
 
                 yield return null;
             }
+
+            anim.SetBool("Dash", false);
         }
     }
 }
