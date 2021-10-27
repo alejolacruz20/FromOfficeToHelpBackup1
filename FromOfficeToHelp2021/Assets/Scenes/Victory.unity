@@ -248,15 +248,15 @@ RectTransform:
   m_GameObject: {fileID: 51705933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1764704, y: 0.5882352, z: 0.5882352}
   m_Children: []
-  m_Father: {fileID: 1938495150}
-  m_RootOrder: 6
+  m_Father: {fileID: 1722545899}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 317.647, y: 99.999985}
+  m_SizeDelta: {x: 640, y: 419.81683}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &51705935
 Animator:
@@ -472,7 +472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.999878, y: -12.0000305}
+  m_AnchoredPosition: {x: 3.999878, y: -12}
   m_SizeDelta: {x: 52.4, y: -113.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &130318221
@@ -2491,6 +2491,7 @@ RectTransform:
   m_LocalScale: {x: 0.85, y: 1.7, z: 1.7}
   m_Children:
   - {fileID: 1721309686}
+  - {fileID: 51705934}
   m_Father: {fileID: 1938495150}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2995,6 +2996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victory: 0
+  uiAnim: {fileID: 0}
 --- !u!114 &1938495147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3072,7 +3074,6 @@ RectTransform:
   - {fileID: 130318220}
   - {fileID: 1454255242}
   - {fileID: 1722545899}
-  - {fileID: 51705934}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

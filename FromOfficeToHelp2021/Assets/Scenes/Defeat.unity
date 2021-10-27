@@ -843,6 +843,7 @@ RectTransform:
   m_LocalScale: {x: 0.85, y: 1.7, z: 1.7}
   m_Children:
   - {fileID: 1672090095}
+  - {fileID: 1255034362}
   m_Father: {fileID: 1999033256}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2180,15 +2181,15 @@ RectTransform:
   m_GameObject: {fileID: 1255034361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1764704, y: 0.5882352, z: 0.5882352}
   m_Children: []
-  m_Father: {fileID: 1999033256}
-  m_RootOrder: 5
+  m_Father: {fileID: 246106893}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 263.41174, y: 84.882355}
+  m_SizeDelta: {x: 640, y: 419.81683}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1255034363
 Animator:
@@ -3113,6 +3114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victory: 0
+  uiAnim: {fileID: 0}
 --- !u!114 &1999033253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3189,7 +3191,6 @@ RectTransform:
   - {fileID: 1419224144}
   - {fileID: 1207204741}
   - {fileID: 246106893}
-  - {fileID: 1255034362}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
