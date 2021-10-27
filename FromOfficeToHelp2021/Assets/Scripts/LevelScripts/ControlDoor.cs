@@ -20,6 +20,12 @@ public class ControlDoor : MonoBehaviour
         {
             Dentro = false;
         }
+
+        if (col.tag == "NPC")
+        {
+            anim.SetBool("OpenDoor", false);
+            FindObjectOfType<AudioManager>().Play("OpenDoor");
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -27,6 +33,21 @@ public class ControlDoor : MonoBehaviour
        if(col.tag == "Player")
        {
            Dentro = true;
+       }
+
+       if(col.tag == "NPC")
+       {
+            puerta = !puerta;
+            FindObjectOfType<AudioManager>().Play("OpenDoor");
+
+            if (puerta)
+            {
+                anim.SetBool("OpenDoor", true);
+            }
+            else
+            {
+                anim.SetBool("OpenDoor", false);
+            }
        }
     }
 

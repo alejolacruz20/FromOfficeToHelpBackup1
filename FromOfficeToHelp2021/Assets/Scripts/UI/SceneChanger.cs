@@ -8,10 +8,15 @@ using UnityEngine.UI;
 public class SceneChanger : MonoBehaviour
 {
     public bool victory = false;
+    //public Transform myTransform;
+    //public GameObject myPlayer;
+
     private void OnTriggerEnter(Collider target)
     {
         if (target.tag == "Player")
         {
+            //victory = true;
+            //myPlayer.transform.position = myTransform.transform.position;
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("Victory");
         }
