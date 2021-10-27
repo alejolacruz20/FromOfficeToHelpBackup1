@@ -23,6 +23,7 @@ public class NPCWaypoints : Waypoints
         if(target.tag == "PlayerBullet")
         {
             isHappy = true;
+            FindObjectOfType<AudioManager>().Play("Thank You");
             anim.SetBool("Happy", true);
             //startChronometer = true;
             //CharacterAnimationInteraction targetPoints = playerTarget.GetComponent<CharacterAnimationInteraction>();

@@ -23726,6 +23726,18 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
     source: {fileID: 0}
+  - name: Thank You
+    clip: {fileID: 8300000, guid: 959c327d326767647baa8e226f64f9cb, type: 3}
+    Volume: 0.326
+    Pitch: 1
+    Loop: 0
+    source: {fileID: 0}
+  - name: Pickup
+    clip: {fileID: 8300000, guid: 4f0b24e436629f44e90e488e811f7400, type: 3}
+    Volume: 0.326
+    Pitch: 1
+    Loop: 0
+    source: {fileID: 0}
 --- !u!4 &1788328184
 Transform:
   m_ObjectHideFlags: 0

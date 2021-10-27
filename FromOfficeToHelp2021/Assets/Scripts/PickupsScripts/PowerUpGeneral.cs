@@ -25,6 +25,7 @@ public class PowerUpGeneral : MonoBehaviour
                 SpeedShoot();
             }
 
+            FindObjectOfType<AudioManager>().Play("Pickup");
             Destroy(gameObject);
         }
 
