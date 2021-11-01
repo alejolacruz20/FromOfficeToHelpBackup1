@@ -11,6 +11,8 @@ public class NPCWaypoints : Waypoints
     public float limitChronometer;
     public int happyPoints;
     CharacterAnimationInteraction targetPoints;
+    public Transform spawnParticlesHeart;
+    public ParticleSystem heartparticles;
 
     public void Start()
     {
@@ -23,6 +25,7 @@ public class NPCWaypoints : Waypoints
         if(target.tag == "PlayerBullet")
         {
             isHappy = true;
+            Instantiate(heartparticles, spawnParticlesHeart.position, spawnParticlesHeart.rotation);
             FindObjectOfType<AudioManager>().Play("Thank You");
             anim.SetBool("Happy", true);
             //startChronometer = true;
