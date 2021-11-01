@@ -70,6 +70,9 @@ public class CharacterAnimationInteraction : MonoBehaviour
         {
             if (currentCronometer <= cronometer) //Enfriamiento
             {
+                doingTheAnimation = false;
+                characterAnimator.SetBool("Attack", false);
+
                 if (Input.GetKeyDown(KeyCode.Mouse0) && doingTheAnimation == false) // Dentro del Update llamar a esta funcion 
                 {
                     doingTheAnimation = true;
@@ -82,13 +85,13 @@ public class CharacterAnimationInteraction : MonoBehaviour
         {
             characterAnimator.SetBool("SpeedShoot", false);
 
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 //Hacer animacion de levantar el brazo, que cuando termina pasa a brazo extendido
                 characterAnimator.SetBool("SpeedShoot", true);
             }
 
-            if (Input.GetKey(KeyCode.Mouse1))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
                 characterAnimator.SetBool("SpeedShoot", true);
 
@@ -97,10 +100,9 @@ public class CharacterAnimationInteraction : MonoBehaviour
                     Instantiate(bullet, bulletSpawner[i].position, bulletSpawner[i].rotation);
                 }
                 //hacer animacion de disparo rapido
-
             }
 
-            if (Input.GetKeyUp(KeyCode.Mouse1))
+            if (Input.GetKeyUp(KeyCode.Mouse0))
             {
                 //vuelve a idle
                 characterAnimator.SetBool("SpeedShoot", false);
@@ -117,10 +119,9 @@ public class CharacterAnimationInteraction : MonoBehaviour
         }
     }
 
-    public void AttackFinished() //Funcion para poner en falso el ataque
-    {
-        doingTheAnimation = false;
-        characterAnimator.SetBool("Attack", false);
-    }
-
+    //public void AttackFinished() //Funcion para poner en falso el ataque
+    //{
+    //    //doingTheAnimation = false;
+    //    //characterAnimator.SetBool("Attack", false);
+    //}
 }
