@@ -41,6 +41,5 @@ public class EnemyHealth : GeneralEntitiesLife
     public void SpawnParticles()
     {
         Instantiate(deathParticles, spawnParticlePoint.position, spawnParticlePoint.rotation);
-        spawnDeathParticles = false;
     }
 }
