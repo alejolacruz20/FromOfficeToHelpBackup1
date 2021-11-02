@@ -33,7 +33,7 @@ public class EnemyHealth : GeneralEntitiesLife
         //    Instantiate(deathParticles, spawnParticlePoint.position, spawnParticlePoint.rotation);
         //    spawnDeathParticles = false;
         //}
-
+        anim.SetBool("Hit", true);
         anim.SetBool("Freedom", true);
         base.ZeroLife();
     }
@@ -41,5 +41,12 @@ public class EnemyHealth : GeneralEntitiesLife
     public void SpawnParticles()
     {
         Instantiate(deathParticles, spawnParticlePoint.position, spawnParticlePoint.rotation);
+        FindObjectOfType<AudioManager>().Play("DeathEnemy");
+    }
+
+    public override void TakeDamage(float amount)
+    {
+        FindObjectOfType<AudioManager>().Play("EnemyHit");
+        base.TakeDamage(amount);
     }
 }

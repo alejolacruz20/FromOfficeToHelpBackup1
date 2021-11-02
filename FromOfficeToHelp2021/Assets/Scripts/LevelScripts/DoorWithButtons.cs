@@ -31,6 +31,7 @@ public class DoorWithButtons : MonoBehaviour
 
         if (buttons.Length == activatedButtonsList.Count)
         {
+            FindObjectOfType<AudioManager>().Play("FinalDoorOpen");
             anim.SetBool("OpenFinalDoor", true);
         }
     }

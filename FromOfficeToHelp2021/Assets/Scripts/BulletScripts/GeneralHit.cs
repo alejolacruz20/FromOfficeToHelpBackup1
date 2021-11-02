@@ -14,6 +14,7 @@ public class GeneralHit : MonoBehaviour
         //los reconoce como que tiene el componente GeneralEntitiesLife 
         //La manera de que la bala ddl enemigo no le pegue al enemigo seria con layers
         var hitObject = target.GetComponent<GeneralEntitiesLife>();
+        var enemieObject = target.GetComponent<EnemyHealth>();
 
         if (hitObject != null)
         {

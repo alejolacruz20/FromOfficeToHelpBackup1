@@ -44,7 +44,7 @@ public class GeneralEntitiesLife : MonoBehaviour
         if (amount > 0 && currentHitPoints > 0)
         {
             currentHitPoints -= amount;
-
+         
             //if (currentHitPoints <= 0)
             //{
             //    ZeroLife();

@@ -76,6 +76,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Mouse0) && doingTheAnimation == false) // Dentro del Update llamar a esta funcion 
                 {
                     doingTheAnimation = true;
+                    FindObjectOfType<AudioManager>().Play("Shoot");
                     characterAnimator.SetBool("Attack", true);
                     cronometer = 0f;
                 }
@@ -94,6 +95,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 characterAnimator.SetBool("SpeedShoot", true);
+                FindObjectOfType<AudioManager>().Play("Shoot");
 
                 for (int i = 0; i < bulletSpawner.Length; i++)
                 {
