@@ -29,10 +29,14 @@ public class DoorWithButtons : MonoBehaviour
             }
         }
 
-        if (buttons.Length == activatedButtonsList.Count)
+        if (buttons.Length == activatedButtonsList.Count && BossHealth.downBoss == true)
         {
-            FindObjectOfType<AudioManager>().Play("FinalDoorOpen");
             anim.SetBool("OpenFinalDoor", true);
         }
+    }
+
+    public void DoorSound()
+    {
+        FindObjectOfType<AudioManager>().Play("FinalDoorOpen");
     }
 }
