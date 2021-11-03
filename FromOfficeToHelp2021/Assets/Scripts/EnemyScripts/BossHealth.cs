@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossHealth : GeneralEntitiesLife
 {
     public GameObject victoryZone;
+    public Animator anim;
     public static bool downBoss = false;
 
     public override void TakeDamage(float amount)
@@ -15,6 +16,7 @@ public class BossHealth : GeneralEntitiesLife
     {
         downBoss = true;
         victoryZone.SetActive(true);
+        anim.SetBool("Defeat", true);
         base.ZeroLife();
         //YAY
     }
