@@ -11,6 +11,7 @@ public class BossHealth : GeneralEntitiesLife
     public override void TakeDamage(float amount)
     {
         base.TakeDamage(amount);
+        FindObjectOfType<AudioManager>().Play("EnemyHit");
     }
     public override void ZeroLife()
     {
