@@ -18,6 +18,12 @@ public class NPcOpen : MonoBehaviour
         {
             anim.SetBool("Open", true);
         }
+
+        if (Blocked_Door.finalTaken == true && Blocked_Door.taken == true)
+        {
+            FindObjectOfType<AudioManager>().Play("ElevatorRingBell");
+            anim.SetBool("Open", true);
+        }
     }
 
     private void OnTriggerExit(Collider target)

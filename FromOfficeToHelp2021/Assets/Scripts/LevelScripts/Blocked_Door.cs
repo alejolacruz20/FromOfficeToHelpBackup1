@@ -9,11 +9,13 @@ public class Blocked_Door : MonoBehaviour
     public bool inside = false;
     bool door;
     public static bool taken = false;
+    public static bool finalTaken = true;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
-    }
+        finalTaken = false;
+}
 
     void OnTriggerEnter(Collider target)
     {

@@ -28,7 +28,7 @@ public class Control_Llave : MonoBehaviour
         }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if(inside && Input.GetKeyDown(KeyCode.E))
         {
