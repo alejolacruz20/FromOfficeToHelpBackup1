@@ -29457,7 +29457,7 @@ GameObject:
   - component: {fileID: 1652195531}
   - component: {fileID: 1652195530}
   m_Layer: 5
-  m_Name: Image
+  m_Name: HeartSight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
