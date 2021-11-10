@@ -10,27 +10,27 @@ PrefabInstance:
     - target: {fileID: 5232917614305118420, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
       propertyPath: m_Name
-      value: StarParticles (1)
+      value: StarParticlesBoss
       objectReference: {fileID: 0}
     - target: {fileID: 5232917614305118422, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.8867924
+      value: 0.20784311
       objectReference: {fileID: 0}
     - target: {fileID: 5232917614305118422, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.35555357
+      value: 0.85882354
       objectReference: {fileID: 0}
     - target: {fileID: 5232917614305118422, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.6568158
+      value: 0.85882354
       objectReference: {fileID: 0}
     - target: {fileID: 5232917614305118423, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.99
+      value: 19.82871
       objectReference: {fileID: 0}
     - target: {fileID: 5232917614305118423, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
@@ -40,7 +40,7 @@ PrefabInstance:
     - target: {fileID: 5232917614305118423, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.08685
+      value: 20.14823
       objectReference: {fileID: 0}
     - target: {fileID: 5232917614305118423, guid: b5996d1ca36574341a8ce189b188f932,
         type: 3}
