@@ -9,7 +9,7 @@ public class Blocked_Door : MonoBehaviour
     public bool inside = false;
     bool door;
     public static bool taken = false;
-    public static bool finalTaken = true;
+    public static bool finalTaken = false;
 
     private void Start()
     {

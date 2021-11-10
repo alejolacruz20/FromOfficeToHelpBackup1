@@ -5,9 +5,14 @@ using UnityEngine;
 public class FinalKeyCard : Control_Llave
 {
     // Update is called once per frame
-    public override void Update()
+    private void OnTriggerEnter(Collider target)
     {
-        base.Update();
-        Blocked_Door.finalTaken = true;
+        if (target.tag == "Player")
+        {
+            FindObjectOfType<AudioManager>().Play("Pickup");
+            rend.gameObject.SetActive(false);
+            Blocked_Door.finalTaken = true;
+            base.Update();
+        }
     }
 }

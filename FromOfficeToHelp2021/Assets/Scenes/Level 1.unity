@@ -11675,7 +11675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764096761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.21, y: 130.99, z: 17.16}
+  m_LocalPosition: {x: 1.97, y: 130.99, z: 17.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13298,7 +13298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 865616139}
-  playerblock: {fileID: 764096761}
+  playerBlock: {fileID: 764096761}
 --- !u!1 &872128586
 GameObject:
   m_ObjectHideFlags: 0
