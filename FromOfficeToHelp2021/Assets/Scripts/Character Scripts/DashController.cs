@@ -45,7 +45,7 @@ public class DashController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Dash"); //Reproducimos el sonido
             while (Time.time < StartTime + DashTime)
             {
-                MoveScript.controller.Move(MoveScript.MoveDirection * DashSpeed * Time.deltaTime); //Movimiento del dash
+                MoveScript.RB.velocity = (MoveScript.MoveDirection * DashSpeed); //Movimiento del dash
 
                 yield return null;
             }

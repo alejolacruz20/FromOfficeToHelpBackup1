@@ -41,18 +41,7 @@ public class RandomMovement : MonoBehaviour
             {
                 routine = Random.Range(0, 2);
                 chronometer = 0;
-                /*if (routine == 2)
-                {
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, angle, 5f);
-                    transform.Translate(Vector3.forward * 1 * Time.deltaTime);
-                }
-                else if(routine == 1)
-                {
-                    degree = Random.Range(0, 360f);
-                    angle = Quaternion.Euler(0, degree, 0);
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, angle, 5f);
-                    transform.Translate(Vector3.forward * 1 * Time.deltaTime);
-                }*/
+           
             }
             switch (routine)
             {
@@ -89,12 +78,7 @@ public class RandomMovement : MonoBehaviour
             }
             else
             {
-                /*damageChronometer += 1 * Time.deltaTime;
-                if (damageChronometer >= 1)
-                {
-                    Debug.Log("Daño causado =" + damage);
-                    damageChronometer = 0;
-                }*/
+       
 
                 var lookPosition = target.transform.position - transform.position;
                 lookPosition.y = 0;

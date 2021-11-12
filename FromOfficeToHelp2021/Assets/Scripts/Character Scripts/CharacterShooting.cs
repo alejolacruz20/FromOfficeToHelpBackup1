@@ -13,8 +13,6 @@ public class CharacterShooting : MonoBehaviour
     {
         if (Input.GetButtonDown(buttonName))
         {
-            FindObjectOfType<AudioManager>().Play("Shoot");
-
             for (int i = 0; i < shootingPoints.Length; i++)
             {
                 Instantiate(disparoPrefab, shootingPoints[i].position, shootingPoints[i].rotation); //instanciamos una bala

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public CharacterController controller;
+    public Rigidbody RB;
     public float baseSpeed = 12f;
     public float speed;
     public Vector3 MoveDirection;
@@ -35,11 +35,14 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        MoveDirection = transform.right * x + transform.forward * z; //Movimiento en base a la direccion de la camara
-        controller.Move(MoveDirection * speed * Time.deltaTime);
+        float HorMov = Input.GetAxis("Horizontal");
+        float VerMov = Input.GetAxis("Vertical");
 
+        if (HorMov != 0 || VerMov != 0)
+        {
+            MoveDirection = transform.forward * VerMov + transform.right * HorMov;
+            RB.velocity = MoveDirection * speed;
+        }
     }
 }
 

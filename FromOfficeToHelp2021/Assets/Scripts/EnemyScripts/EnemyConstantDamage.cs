@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,14 +16,13 @@ public class EnemyConstantDamage : MonoBehaviour
     public float slowdownAmount;
     public bool slowedDown;
     private EnemyHealth enemyLife;
-    CharacterMovement targetMovement;
+    public CharacterMovement targetMovement;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyLife = gameObject.GetComponent<EnemyHealth>();
-        target = GameObject.Find("Character");
-        targetMovement = target.GetComponent<CharacterMovement>();
+        target = GameObject.Find("Character");   
     }
 
     // Update is called once per frame
