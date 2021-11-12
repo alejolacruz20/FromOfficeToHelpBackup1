@@ -76,7 +76,6 @@ public class CharacterAnimationInteraction : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Mouse0) && doingTheAnimation == false) // Dentro del Update llamar a esta funcion 
                 {
                     doingTheAnimation = true;
-                    FindObjectOfType<AudioManager>().Play("Shoot");
                     characterAnimator.SetBool("Attack", true);
                     cronometer = 0f;
                 }
@@ -90,13 +89,13 @@ public class CharacterAnimationInteraction : MonoBehaviour
             {
                 //Hacer animacion de levantar el brazo, que cuando termina pasa a brazo extendido
                 characterAnimator.SetBool("SpeedShoot", true);
+                FindObjectOfType<AudioManager>().Play("Shoot"); //Sonido Automatico
             }
 
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 characterAnimator.SetBool("SpeedShoot", true);
-                FindObjectOfType<AudioManager>().Play("Shoot");
-
+          
                 for (int i = 0; i < bulletSpawner.Length; i++)
                 {
                     Instantiate(bullet, bulletSpawner[i].position, bulletSpawner[i].rotation);
@@ -110,20 +109,14 @@ public class CharacterAnimationInteraction : MonoBehaviour
                 characterAnimator.SetBool("SpeedShoot", false);
             }
         }
-
     }
 
     public void AnimationShooting()
     {
+        FindObjectOfType<AudioManager>().Play("Shoot");
         for (int i = 0; i < bulletSpawner.Length; i++)
         {
             Instantiate(bullet, bulletSpawner[i].position, bulletSpawner[i].rotation); //Instanciamos una bala
         }
     }
-
-    //public void AttackFinished() //Funcion para poner en falso el ataque
-    //{
-    //    //doingTheAnimation = false;
-    //    //characterAnimator.SetBool("Attack", false);
-    //}
 }
