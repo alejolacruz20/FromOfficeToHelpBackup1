@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    CapsuleCollider Playercol;
+    float OriginalHeight;
+    public float ReducedHeigth;
     public Rigidbody RB;
     public float baseSpeed = 12f;
     public float speed;
@@ -15,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
+        Playercol = GetComponent<CapsuleCollider>();
+        OriginalHeight = Playercol.height;
         speed = baseSpeed;
         camaraAnimator.SetBool("ShakeCamera", false);
     }
@@ -43,6 +48,26 @@ public class CharacterMovement : MonoBehaviour
             MoveDirection = transform.forward * VerMov + transform.right * HorMov;
             RB.velocity = MoveDirection * speed;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Crouch();
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            GoUp();
+        }
+        
+    }
+
+    void Crouch() //Metodo para agacharse
+    {
+        Playercol.height = ReducedHeigth;
+    }
+
+    void GoUp() //Metodo para levantarse
+    {
+        Playercol.height = OriginalHeight;
     }
 }
 
