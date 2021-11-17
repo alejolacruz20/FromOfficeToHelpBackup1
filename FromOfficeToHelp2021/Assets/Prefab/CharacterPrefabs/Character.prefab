@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6c37ea366359f4a8180ecce5defd76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReducedHeigth: 0
   RB: {fileID: 7610709316132160262}
   baseSpeed: 8
   speed: 7.5
@@ -108,7 +109,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.26
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -198,7 +199,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7610709316132160257}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
