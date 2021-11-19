@@ -14,7 +14,8 @@ public class CharacterMovement : MonoBehaviour
     public float speed;
     public Vector3 MoveDirection;
     public Animator camaraAnimator;
-
+    public float JumpForce;
+    
 
     private void Start()
     {
@@ -38,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float HorMov = Input.GetAxis("Horizontal");
         float VerMov = Input.GetAxis("Vertical");
@@ -49,15 +50,19 @@ public class CharacterMovement : MonoBehaviour
             RB.velocity = MoveDirection * speed;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             Crouch();
         }
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        else if (Input.GetKeyUp(KeyCode.C))
         {
             GoUp();
         }
-        
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            RB.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        }
     }
 
     void Crouch() //Metodo para agacharse

@@ -5,7 +5,6 @@ using UnityEngine;
 public class DashController : MonoBehaviour
 {
     CharacterMovement MoveScript;
-
     public float DashSpeed;
     public float DashTime;
     public float dash_Timer;
@@ -28,7 +27,7 @@ public class DashController : MonoBehaviour
             canDash = true;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.F ))
         {
             StartCoroutine(Dash());
         }

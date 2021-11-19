@@ -3950,7 +3950,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 4.95e-41, w: 1.02e-43}
+  m_BoundingSphereOverride: {x: -3.11e-43, y: -1.114e-42, z: 6e-45, w: 2.8e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7960,7 +7960,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 9.1835e-41, w: 1.4785518e-38}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 9.404242e-38, w: 1.7579e-41}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10989,7 +10989,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.3509887e-38, y: 5.7397e-41, z: 0, w: -9.3162445e+16}
+  m_BoundingSphereOverride: {x: 3.8205e-41, y: 3.049e-42, z: 1.3632e-41, w: 3.8519774e-34}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -15001,7 +15001,7 @@ Light:
   m_BounceIntensity: 4
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.9449e-41, y: 6e-44, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 3.7616967e-37, w: 2.9057e-41}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -19022,7 +19022,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.9449e-41, y: 1.05e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 6.018715e-36, z: 2.92008e-40, w: 1.13e-41}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -41054,6 +41054,11 @@ PrefabInstance:
       propertyPath: ReducedHeigth
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7610709316132160258, guid: 0d5eb8cf0cb28ef4aa07105e48f5b56d,
+        type: 3}
+      propertyPath: JumpForce
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 7610709316132160259, guid: 0d5eb8cf0cb28ef4aa07105e48f5b56d,
         type: 3}
       propertyPath: m_Height
@@ -41084,6 +41089,11 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 120777456}
+    - target: {fileID: 7610709316132160261, guid: 0d5eb8cf0cb28ef4aa07105e48f5b56d,
+        type: 3}
+      propertyPath: DashSpeed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7610709316132160262, guid: 0d5eb8cf0cb28ef4aa07105e48f5b56d,
         type: 3}
       propertyPath: m_Constraints
