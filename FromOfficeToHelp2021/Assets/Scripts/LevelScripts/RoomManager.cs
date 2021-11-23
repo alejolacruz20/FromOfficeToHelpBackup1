@@ -6,13 +6,13 @@ public class RoomManager : MonoBehaviour
 {
     public BoxWaypoints cajaActivated;
     //public Charco charcoActivated;
-    public DisparoHorizontal disparosActivated;
+    //public DisparoHorizontal disparosActivated;
     public CentroEnergia moduloDeEnergia;
     public int moduloLever;
 
     void Start()
     {
-        disparosActivated.enabled = false;
+        //disparosActivated.enabled = false;
         cajaActivated.enabled = false;
         //charcoActivated.enabled = false;
     }
@@ -27,14 +27,14 @@ public class RoomManager : MonoBehaviour
             switch (moduloLever)
             {
                 case 0:
-                    disparosActivated.enabled = false;
+                    //disparosActivated.enabled = false;
                     cajaActivated.enabled = true;
                     //charcoActivated.enabled = false;
                     break;
 
                 case 1:
                     cajaActivated.enabled = false;
-                    disparosActivated.enabled = true;
+                    //disparosActivated.enabled = true;
                    // charcoActivated.enabled = false;
                     break;
 

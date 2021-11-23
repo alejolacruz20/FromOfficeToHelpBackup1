@@ -30,19 +30,11 @@ public class CentroEnergia : MonoBehaviour
             if (LeverOrientation == 0)
             { 
                 cables[1].material.SetColor("_Color", Color.red);
-                cables[2].material.SetColor("_Color", Color.red);
                 cables[LeverOrientation].material.SetColor("_Color", Color.green);
             }
             else if (LeverOrientation == 1)
             {
                 cables[0].material.SetColor("_Color", Color.red);
-                cables[2].material.SetColor("_Color", Color.red);
-                cables[LeverOrientation].material.SetColor("_Color", Color.green);
-            }
-            else
-            {
-                cables[0].material.SetColor("_Color", Color.red);
-                cables[1].material.SetColor("_Color", Color.red);
                 cables[LeverOrientation].material.SetColor("_Color", Color.green);
             }
         }
@@ -78,17 +70,14 @@ public class CentroEnergia : MonoBehaviour
         {
             if (theLeverIsConnected == true)
             {
-
                 LeverOrientation += 1;
 
-                if (LeverOrientation > 2)
+                if (LeverOrientation > 1)
                 {
                     LeverOrientation = 0;
                 }
-
             }
         }
     }
-
 }
 
