@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
     public Vector3 MoveDirection;
     public Animator camaraAnimator;
     public float JumpForce;
-    
+
 
     private void Start()
     {
@@ -46,10 +46,14 @@ public class CharacterMovement : MonoBehaviour
 
         if (HorMov != 0 || VerMov != 0)
         {
-            MoveDirection = transform.forward * VerMov + transform.right * HorMov;
-            RB.velocity = MoveDirection * speed;
+            MoveDirection = (transform.forward * VerMov + transform.right * HorMov) * speed;
+            MoveDirection.y = RB.velocity.y;
+            RB.velocity = MoveDirection;
         }
+    }
 
+    private void Update()
+    {
         if (Input.GetKeyDown(KeyCode.C))
         {
             Crouch();
@@ -64,6 +68,13 @@ public class CharacterMovement : MonoBehaviour
             RB.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
     }
+
+    //private bool IsGrounded() 
+    //{
+    //    return Physics.BoxCast();
+    //}
+        
+
 
     void Crouch() //Metodo para agacharse
     {

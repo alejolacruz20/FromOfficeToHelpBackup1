@@ -11,11 +11,13 @@ public class DashController : MonoBehaviour
     public float current_dashTimer;
     public bool canDash;
     public Animator anim;
+    AudioManager AudioManager;
 
     void Start()
     {
         MoveScript = GetComponent<CharacterMovement>();
         anim.SetBool("Dash", false);
+        AudioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class DashController : MonoBehaviour
             canDash = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.F ))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             StartCoroutine(Dash());
         }
@@ -41,14 +43,10 @@ public class DashController : MonoBehaviour
             dash_Timer = 0f;
             float StartTime = Time.time;
             anim.SetBool("Dash", true);
-            FindObjectOfType<AudioManager>().Play("Dash"); //Reproducimos el sonido
-            while (Time.time < StartTime + DashTime)
-            {
-                MoveScript.RB.velocity = (MoveScript.MoveDirection * DashSpeed); //Movimiento del dash
-
-                yield return null;
-            }
-
+            AudioManager.Play("Dash"); //Reproducimos el sonido
+            MoveScript.speed *= DashSpeed; //Movimiento del dash
+            yield return new WaitForSeconds(DashTime);
+            MoveScript.speed /= DashSpeed; //Movimiento del dash
             anim.SetBool("Dash", false);
         }
     }
