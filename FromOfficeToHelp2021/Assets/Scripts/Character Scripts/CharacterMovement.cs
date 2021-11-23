@@ -15,6 +15,8 @@ public class CharacterMovement : MonoBehaviour
     public Vector3 MoveDirection;
     public Animator camaraAnimator;
     public float JumpForce;
+    bool isGrounded = false;
+     
 
 
     private void Start()
@@ -24,6 +26,7 @@ public class CharacterMovement : MonoBehaviour
         speed = baseSpeed;
         camaraAnimator.SetBool("ShakeCamera", false);
     }
+        
 
     public void SpeedVariation(float amount) //Pedimos un valor para saber cuanta velocidad tenemos
     {
@@ -50,6 +53,18 @@ public class CharacterMovement : MonoBehaviour
             MoveDirection.y = RB.velocity.y;
             RB.velocity = MoveDirection;
         }
+
+        GroundCheck();
+    }
+
+  
+
+    private void UpdateJump()
+    {
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            RB.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        }
     }
 
     private void Update()
@@ -63,18 +78,8 @@ public class CharacterMovement : MonoBehaviour
             GoUp();
         }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            RB.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-        }
+        UpdateJump();
     }
-
-    //private bool IsGrounded() 
-    //{
-    //    return Physics.BoxCast();
-    //}
-        
-
 
     void Crouch() //Metodo para agacharse
     {
@@ -84,6 +89,19 @@ public class CharacterMovement : MonoBehaviour
     void GoUp() //Metodo para levantarse
     {
         Playercol.height = OriginalHeight;
+        
+    }
+
+    void GroundCheck() 
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, +3f))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
     }
 }
 
