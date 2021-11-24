@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &135248415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 135248416}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &135248416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135248415}
+  m_LocalRotation: {x: -0, y: 0.029149625, z: -0, w: 0.9995751}
+  m_LocalPosition: {x: 0.011, y: 1.58, z: 0.182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7089417296189986370}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 3.341, z: 0}
 --- !u!1 &260283570619433146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,9 +1784,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6069148745566315601}
-  m_LocalRotation: {x: -0, y: -0.7511102, z: -0, w: 0.6601768}
+  m_LocalRotation: {x: 0, y: -0.7511085, z: 0, w: 0.6601787}
   m_LocalPosition: {x: 247.279, y: 156.816, z: 463.444}
-  m_LocalScale: {x: 2.1362972, y: 2.1362972, z: 2.1362972}
+  m_LocalScale: {x: 2.1362967, y: 2.1362972, z: 2.1362967}
   m_Children:
   - {fileID: 509683010006376168}
   - {fileID: 6664327835866638774}
@@ -1766,6 +1796,7 @@ Transform:
   - {fileID: 1787582892868571774}
   - {fileID: 2904384795155219386}
   - {fileID: 354038231497701359}
+  - {fileID: 135248416}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -97.373, z: 0}
@@ -1779,7 +1810,7 @@ Animator:
   m_GameObject: {fileID: 6069148745566315601}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e398ae513ed7f214e934ef13aaa39ef5, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d769742c96b48d04595307fb8efcd8a5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
