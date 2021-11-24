@@ -24340,7 +24340,7 @@ GameObject:
   - component: {fileID: 1259645023}
   - component: {fileID: 1259645022}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Victory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
