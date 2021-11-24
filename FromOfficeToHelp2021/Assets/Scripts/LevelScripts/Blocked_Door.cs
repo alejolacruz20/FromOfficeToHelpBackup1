@@ -17,7 +17,7 @@ public class Blocked_Door : MonoBehaviour
         finalTaken = false;
 }
 
-    void OnTriggerEnter(Collider target)
+    private void OnTriggerEnter(Collider target)
     {
         if(target.tag == "Player")
         {
@@ -33,7 +33,7 @@ public class Blocked_Door : MonoBehaviour
         }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (inside && Input.GetKeyDown(KeyCode.E) && taken)
         {

@@ -6,25 +6,31 @@ public class PuertasCentraleslvl2 : MonoBehaviour
 {
     public CentroEnergia centroDeEnergia;
     public int roomNumber;
-    public Renderer door;
+    public Animator puertaCentral;
+    //public Renderer door;
     
     public bool puertaAbierta;
-   
 
-    // Update is called once per frame
+    private void Start()
+    {
+        puertaCentral.SetBool("Open", false);
+    }
+
     void Update()
     {
         if (centroDeEnergia.theConnectorIsConnected == true)
         {
             if (centroDeEnergia.LeverOrientation == roomNumber)
             {
-                door.enabled = false;
+                //door.enabled = false;
                 puertaAbierta = true;
+                puertaCentral.SetBool("Open", true);
             }
             else 
             {
-                door.enabled = true;
+                //door.enabled = true;
                 puertaAbierta = false;
+                puertaCentral.SetBool("Open", false);
             }
         }
     }

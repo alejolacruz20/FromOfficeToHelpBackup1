@@ -11,6 +11,7 @@ public class CentroEnergia : MonoBehaviour
     public Renderer[] cables;
     public GameObject lever;
     public int LeverOrientation = 0;
+    public Animator PalancaInterruptor; 
     
     void Start()
     {
@@ -54,7 +55,6 @@ public class CentroEnergia : MonoBehaviour
 
                 lever.SetActive(true);
                 theLeverIsConnected = true;
-
             }
             else if (theLeverIsConnected == true && Input.GetKeyDown(KeyCode.E))
             {
@@ -70,10 +70,13 @@ public class CentroEnergia : MonoBehaviour
         {
             if (theLeverIsConnected == true)
             {
+                PalancaInterruptor.SetBool("PrimerInterruptor", true);
+                PalancaInterruptor.SetBool("SegundoInterruptor", true);
                 LeverOrientation += 1;
 
                 if (LeverOrientation > 1)
                 {
+                    PalancaInterruptor.SetBool("SegundoInterruptor", false);
                     LeverOrientation = 0;
                 }
             }
