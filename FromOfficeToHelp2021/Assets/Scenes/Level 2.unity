@@ -6112,8 +6112,8 @@ Transform:
   - {fileID: 1972484573}
   - {fileID: 397711679}
   - {fileID: 343209551136345896}
-  - {fileID: 1068568083}
   - {fileID: 1443486984}
+  - {fileID: 1068568083}
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14473,7 +14473,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0.000000005986525, z: 9e-43, w: 1.28e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -44742,6 +44742,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 330f483c2d63d314e89ea499da06f4ff, type: 3}
+--- !u!1 &6027216887118976860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 774250884714991945, guid: 3ef29f4f4d935c94fb6fdf9e9266c4cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 6420524210699781653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6027216887118976861
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6027216887118976860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3637574681099188458, guid: fd6bae50611e0d34296b2c57b1889b0c, type: 3}
 --- !u!1001 &6420524210699781653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44809,7 +44829,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CentroDeSeguridad
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 904142207023504304, guid: 3ef29f4f4d935c94fb6fdf9e9266c4cb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3ef29f4f4d935c94fb6fdf9e9266c4cb, type: 3}
 --- !u!1001 &6880922935867047534
 PrefabInstance:
@@ -45296,26 +45317,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &8296172669044772970 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3043208315908232831, guid: 3ef29f4f4d935c94fb6fdf9e9266c4cb,
-    type: 3}
-  m_PrefabInstance: {fileID: 6420524210699781653}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &8296172669044772971
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172669044772970}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 3637574681099188458, guid: fd6bae50611e0d34296b2c57b1889b0c, type: 3}
 --- !u!1001 &9014613140059130447
 PrefabInstance:
   m_ObjectHideFlags: 0
