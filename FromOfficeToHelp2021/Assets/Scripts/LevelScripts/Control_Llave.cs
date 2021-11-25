@@ -7,10 +7,12 @@ public class Control_Llave : MonoBehaviour
 {
     public bool inside;
     public Renderer rend;
+    AudioManager AudioManager;
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
+        AudioManager = FindObjectOfType<AudioManager>();
     }
     private void OnTriggerEnter(Collider target)
     {
@@ -33,7 +35,7 @@ public class Control_Llave : MonoBehaviour
         if(inside && Input.GetKeyDown(KeyCode.E))
         {
             Blocked_Door.taken = true;
-            FindObjectOfType<AudioManager>().Play("Pickup");
+            AudioManager.Play("Pickup");
             rend.gameObject.SetActive(false);
         }
     }

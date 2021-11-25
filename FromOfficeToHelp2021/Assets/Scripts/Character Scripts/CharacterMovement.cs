@@ -18,7 +18,6 @@ public class CharacterMovement : MonoBehaviour
     bool isGrounded = false;
      
 
-
     private void Start()
     {
         Playercol = GetComponent<CapsuleCollider>();
@@ -69,11 +68,11 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Crouch();
         }
-        else if (Input.GetKeyUp(KeyCode.C))
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             GoUp();
         }
