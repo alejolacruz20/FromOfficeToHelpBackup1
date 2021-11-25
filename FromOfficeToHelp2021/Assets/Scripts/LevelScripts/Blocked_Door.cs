@@ -10,14 +10,12 @@ public class Blocked_Door : MonoBehaviour
     bool door;
     public static bool taken = false;
     public static bool finalTaken = false;
-    AudioManager audioManager;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         finalTaken = false;
-        audioManager = FindObjectOfType<AudioManager>();
-    }
+}
 
     private void OnTriggerEnter(Collider target)
     {
@@ -40,7 +38,7 @@ public class Blocked_Door : MonoBehaviour
         if (inside && Input.GetKeyDown(KeyCode.E) && taken)
         {
             door = !door;
-            audioManager.Play("UnlockDoor");
+            FindObjectOfType<AudioManager>().Play("UnlockDoor");
         }
         if (door)
         {
@@ -53,7 +51,7 @@ public class Blocked_Door : MonoBehaviour
 
         if (inside && Input.GetKeyDown(KeyCode.E) && taken == false)
         {
-            audioManager.Play("Blocked Door");
+            FindObjectOfType<AudioManager>().Play("Blocked Door");
             anim.SetBool("abierta", false);
         }
     }  

@@ -25,7 +25,7 @@ public class CentroEnergia : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (theConnectorIsConnected == true) // COLOR DE LOS CABLES 
+        if (theConnectorIsConnected == true)
         {
 
             if (LeverOrientation == 0)
@@ -56,14 +56,17 @@ public class CentroEnergia : MonoBehaviour
                 lever.SetActive(true);
                 theLeverIsConnected = true;
             }
-            //else if (theLeverIsConnected == true && Input.GetKeyDown(KeyCode.E))
-            //{
-            //    lever.SetActive(false);
-            //    theLeverIsConnected = false;
-            //}
+            else if (theLeverIsConnected == true && Input.GetKeyDown(KeyCode.E))
+            {
+                lever.SetActive(false);
+                theLeverIsConnected = false;
+            }
         }
+    }
 
-        if (target.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+    private void OnTriggerEnter(Collider target)
+    {
+        if (target.CompareTag("PlayerBullet"))
         {
             if (theLeverIsConnected == true)
             {
@@ -79,24 +82,5 @@ public class CentroEnergia : MonoBehaviour
             }
         }
     }
-
-    //private void OnTriggerEnter(Collider target) 
-    //{
-    //    if (target.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
-    //    {
-    //        if (theLeverIsConnected == true)
-    //        {
-    //            PalancaInterruptor.SetBool("PrimerInterruptor", true);
-    //            PalancaInterruptor.SetBool("SegundoInterruptor", true);
-    //            LeverOrientation += 1;
-
-    //            if (LeverOrientation > 1)
-    //            {
-    //                PalancaInterruptor.SetBool("SegundoInterruptor", false);
-    //                LeverOrientation = 0;
-    //            }
-    //        }
-    //    }
-    //}
 }
 
