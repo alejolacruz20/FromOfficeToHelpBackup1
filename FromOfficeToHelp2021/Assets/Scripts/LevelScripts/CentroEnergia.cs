@@ -31,7 +31,7 @@ public class CentroEnergia : MonoBehaviour
             if (LeverOrientation == 0)
             { 
                 cables[1].material.SetColor("_Color", Color.red);
-                cables[LeverOrientation].material.SetColor("_Color", Color.green);
+                cables[LeverOrientation].material.SetColor("_Color", Color.green); //COLOR DE LOS CABLES 
             }
             else if (LeverOrientation == 1)
             {
@@ -56,31 +56,47 @@ public class CentroEnergia : MonoBehaviour
                 lever.SetActive(true);
                 theLeverIsConnected = true;
             }
-            else if (theLeverIsConnected == true && Input.GetKeyDown(KeyCode.E))
-            {
-                lever.SetActive(false);
-                theLeverIsConnected = false;
-            }
-        }
-    }
+            //else if (theLeverIsConnected == true && Input.GetKeyDown(KeyCode.E))
+            //{
+            //    lever.SetActive(false);
+            //    theLeverIsConnected = false;
+            //}
 
-    private void OnTriggerEnter(Collider target)
-    {
-        if (target.CompareTag("PlayerBullet"))
-        {
-            if (theLeverIsConnected == true)
+            if (target.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
             {
-                PalancaInterruptor.SetBool("PrimerInterruptor", true);
-                PalancaInterruptor.SetBool("SegundoInterruptor", true);
-                LeverOrientation += 1;
-
-                if (LeverOrientation > 1)
+                if (theLeverIsConnected == true)
                 {
-                    PalancaInterruptor.SetBool("SegundoInterruptor", false);
-                    LeverOrientation = 0;
+                    PalancaInterruptor.SetBool("PrimerInterruptor", true);
+                    PalancaInterruptor.SetBool("SegundoInterruptor", true);
+                    LeverOrientation += 1;
+
+                    if (LeverOrientation > 1)
+                    {
+                        PalancaInterruptor.SetBool("SegundoInterruptor", false);
+                        LeverOrientation = 0;
+                    }
                 }
             }
         }
     }
+
+    //private void OnTriggerEnter(Collider target)
+    //{
+    //    if (target.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        if (theLeverIsConnected == true)
+    //        {
+    //            PalancaInterruptor.SetBool("PrimerInterruptor", true);
+    //            PalancaInterruptor.SetBool("SegundoInterruptor", true);
+    //            LeverOrientation += 1;
+
+    //            if (LeverOrientation > 1)
+    //            {
+    //                PalancaInterruptor.SetBool("SegundoInterruptor", false);
+    //                LeverOrientation = 0;
+    //            }
+    //        }
+    //    }
+    //}
 }
 

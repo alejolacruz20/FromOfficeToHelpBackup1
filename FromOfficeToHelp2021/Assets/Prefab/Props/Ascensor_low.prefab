@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 648575515054197072}
   - component: {fileID: 2045991630623406550}
   - component: {fileID: 1379627363346305524}
-  - component: {fileID: 6258141834820830891}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowCajaBotones_low
   m_TagString: Untagged
@@ -79,20 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6258141834820830891
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854771497644093756}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -6478317041811151685, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &1985212277475308010
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +128,6 @@ GameObject:
   - component: {fileID: 4909745866969676417}
   - component: {fileID: 7146634738291433063}
   - component: {fileID: 2878134431699063161}
-  - component: {fileID: 8892501882832639956}
   m_Layer: 0
   m_Name: Ascensor_low:ApoyaBrazos_lowAscensor_low
   m_TagString: Untagged
@@ -211,20 +195,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8892501882832639956
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2768908565682774085}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -1586042883147771707, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &2936016023987919280
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +206,6 @@ GameObject:
   - component: {fileID: 7786158330690826504}
   - component: {fileID: 8302653479690762534}
   - component: {fileID: 7786724560501391507}
-  - component: {fileID: 8483501824137113127}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowEspejo_low
   m_TagString: Untagged
@@ -304,20 +273,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8483501824137113127
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936016023987919280}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -7659907965374909619, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &4379951593318182166
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +284,6 @@ GameObject:
   - component: {fileID: 4570027948091142854}
   - component: {fileID: 9159311755784725387}
   - component: {fileID: 5122748300874182314}
-  - component: {fileID: 7047313413736192641}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowAscensorFuera_low
   m_TagString: Untagged
@@ -397,20 +351,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7047313413736192641
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379951593318182166}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -5760619318474389498, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &6965460609765630355
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +362,6 @@ GameObject:
   - component: {fileID: 1211312473574407166}
   - component: {fileID: 5095717741244690871}
   - component: {fileID: 1757680564683028405}
-  - component: {fileID: 4445028057194681862}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowPuertas_lowPuerta2_low
   m_TagString: Untagged
@@ -490,20 +429,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4445028057194681862
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6965460609765630355}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 1347093009236294526, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &7173534986711424681
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +440,6 @@ GameObject:
   - component: {fileID: 7320522440860773909}
   - component: {fileID: 6066167459395582991}
   - component: {fileID: 2814824393285230315}
-  - component: {fileID: 4505891983376574784}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowPuerta1_lowPuertas_low
   m_TagString: Untagged
@@ -583,20 +507,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4505891983376574784
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7173534986711424681}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 8865322994095215187, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &7928636313091738367
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +518,6 @@ GameObject:
   - component: {fileID: 4056128801009753860}
   - component: {fileID: 5092650697037574155}
   - component: {fileID: 4095268642685495824}
-  - component: {fileID: 3678750722514304362}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowAscensorDentro_low
   m_TagString: Untagged
@@ -676,20 +585,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3678750722514304362
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7928636313091738367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -3901454204336582211, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &8911146479095714201
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +596,6 @@ GameObject:
   - component: {fileID: 7432238558586480950}
   - component: {fileID: 40921547862732924}
   - component: {fileID: 2272127967969119209}
-  - component: {fileID: 2787552732415567376}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowPantalla_low
   m_TagString: Untagged
@@ -769,20 +663,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2787552732415567376
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911146479095714201}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 6802866062976318571, guid: 142982ab7fba3834eb504dacca280976, type: 3}
 --- !u!1 &9068108816028203456
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +674,6 @@ GameObject:
   - component: {fileID: 8804896448671798015}
   - component: {fileID: 8512106546048685459}
   - component: {fileID: 7100048239884119721}
-  - component: {fileID: 2368264615823363671}
   m_Layer: 0
   m_Name: Ascensor_low:Ascensor_lowBordePantalla_low
   m_TagString: Untagged
@@ -862,17 +741,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2368264615823363671
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9068108816028203456}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4878405434612629642, guid: 142982ab7fba3834eb504dacca280976, type: 3}

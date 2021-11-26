@@ -26,8 +26,7 @@ public class CharacterMovement : MonoBehaviour
         speed = baseSpeed;
         camaraAnimator.SetBool("ShakeCamera", false);
     }
-        
-
+       
     public void SpeedVariation(float amount) //Pedimos un valor para saber cuanta velocidad tenemos
     {
         if (amount > 0f)
@@ -56,8 +55,6 @@ public class CharacterMovement : MonoBehaviour
 
         GroundCheck();
     }
-
-  
 
     private void UpdateJump()
     {

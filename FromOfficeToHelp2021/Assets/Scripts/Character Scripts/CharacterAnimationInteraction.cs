@@ -16,11 +16,13 @@ public class CharacterAnimationInteraction : MonoBehaviour
     public float speedShootingChronometer;
     public float speedShootingChronometerLimit = 2f;
     public bool startSpeedShootingChronometer;
+    AudioManager AudioManager;
 
     private void Start()
     {
         characterAnimator = GetComponent<Animator>();
         doingTheAnimation = false;
+        AudioManager = FindObjectOfType<AudioManager>();
     }
 
     private void FixedUpdate()
@@ -89,7 +91,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
             {
                 //Hacer animacion de levantar el brazo, que cuando termina pasa a brazo extendido
                 characterAnimator.SetBool("SpeedShoot", true);
-                FindObjectOfType<AudioManager>().Play("Shoot"); //Sonido Automatico
+                AudioManager.Play("Shoot"); //Sonido Automatico
             }
 
             if (Input.GetKey(KeyCode.Mouse0))
@@ -113,7 +115,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
 
     public void AnimationShooting()
     {
-        FindObjectOfType<AudioManager>().Play("Shoot");
+        AudioManager.Play("Shoot");
         for (int i = 0; i < bulletSpawner.Length; i++)
         {
             Instantiate(bullet, bulletSpawner[i].position, bulletSpawner[i].rotation); //Instanciamos una bala
