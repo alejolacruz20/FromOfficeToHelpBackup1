@@ -8,10 +8,12 @@ public class ControlDoor : MonoBehaviour
     Animator anim;
     bool Dentro = false;
     bool puerta;
+    AudioManager AudioManager;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        AudioManager = FindObjectOfType<AudioManager>();
     }
 
     private void OnTriggerExit(Collider col)
@@ -24,7 +26,7 @@ public class ControlDoor : MonoBehaviour
         if (col.tag == "NPC")
         {
             anim.SetBool("OpenDoor", false);
-            FindObjectOfType<AudioManager>().Play("OpenDoor");
+            AudioManager.Play("OpenDoor");
         }
     }
 
@@ -38,7 +40,7 @@ public class ControlDoor : MonoBehaviour
        if(col.tag == "NPC")
        {
             puerta = !puerta;
-            FindObjectOfType<AudioManager>().Play("OpenDoor");
+            AudioManager.Play("OpenDoor");
 
             if (puerta)
             {
@@ -56,7 +58,7 @@ public class ControlDoor : MonoBehaviour
         if(Dentro && Input.GetKeyDown(KeyCode.E))
         {
             puerta = !puerta;
-            FindObjectOfType<AudioManager>().Play("OpenDoor");
+            AudioManager.Play("OpenDoor");
         }
         if(puerta)
         {
