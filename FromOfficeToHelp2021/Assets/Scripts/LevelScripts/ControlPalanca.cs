@@ -13,7 +13,7 @@ public class ControlPalanca : Control_Llave
 
     public override void Update()
     {
-        if (inside && Input.GetKeyDown(KeyCode.E))
+        if (inside)
         {
             CentroEnergia.playerHaveTheLever = true;
             AudioManager.Play("Pickup");

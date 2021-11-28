@@ -32,7 +32,7 @@ public class Control_Llave : MonoBehaviour
 
     public virtual void Update()
     {
-        if(inside && Input.GetKeyDown(KeyCode.E))
+        if(inside)
         {
             Blocked_Door.taken = true;
             AudioManager.Play("Pickup");

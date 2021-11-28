@@ -17,6 +17,8 @@ public class SceneChangerLevel2 : MonoBehaviour
         if (target.tag == "Player")
         {
             uiAnim.SetBool("Transition", true);
+            Blocked_Door.taken = false;
+            Blocked_Door.finalTaken = false;
             //victory = true;
             //myPlayer.transform.position = myTransform.transform.position;
             ChangesScene(word);
