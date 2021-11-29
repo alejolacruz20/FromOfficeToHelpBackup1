@@ -44,17 +44,17 @@ public class Blocked_Door : MonoBehaviour
         }
         if (door)
         {
-            anim.SetBool("abierta", true);
+            anim.SetBool("OpenDoor", true);
         }
         else
         {
-            anim.SetBool("abierta", false);
+            anim.SetBool("OpenDoor", false);
         }
 
         if (inside && Input.GetKeyDown(KeyCode.E) && taken == false)
         {
             AudioManager.Play("Blocked Door");
-            anim.SetBool("abierta", false);
+            anim.SetBool("OpenDoor", false);
         }
     }  
 }

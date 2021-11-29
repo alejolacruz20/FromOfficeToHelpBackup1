@@ -61,7 +61,7 @@ AnimatorController:
   m_Name: Ascensor_low
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Open
+  - m_Name: OpenDoor
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -89,7 +89,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Open
+    m_ConditionEvent: OpenDoor
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -163825946384202227}
@@ -114,7 +114,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Open
+    m_ConditionEvent: OpenDoor
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7549900558381139039}

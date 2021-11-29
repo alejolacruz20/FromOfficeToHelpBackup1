@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneralEntitiesLife : MonoBehaviour
+public abstract class GeneralEntitiesLife : MonoBehaviour
 {
     public float baseHitPoints;
     public float currentHitPoints;
@@ -44,12 +44,6 @@ public class GeneralEntitiesLife : MonoBehaviour
         if (amount > 0 && currentHitPoints > 0)
         {
             currentHitPoints -= amount;
-         
-            //if (currentHitPoints <= 0)
-            //{
-            //    ZeroLife();
-            //}
-
         }
 
     }

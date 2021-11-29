@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &839586396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839586397}
+  - component: {fileID: 839586398}
+  m_Layer: 9
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &839586397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839586396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7610709316132160256}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839586398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839586396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659781b4b7f369e42bc4d2a06b07da31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalKeys: 2
 --- !u!1 &7610709316132160257
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,6 +59,7 @@ GameObject:
   - component: {fileID: 7610709316132160263}
   - component: {fileID: 7610709316132160262}
   - component: {fileID: 7610709316132160259}
+  - component: {fileID: 1705233648}
   m_Layer: 9
   m_Name: Character
   m_TagString: Player
@@ -34,6 +79,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7610709316724236957}
+  - {fileID: 839586397}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -85.244, z: 0}
@@ -49,13 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6c37ea366359f4a8180ecce5defd76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReducedHeigth: 0
+  ReducedHeigth: 1.5
   RB: {fileID: 7610709316132160262}
   baseSpeed: 8
   speed: 7.5
   MoveDirection: {x: 0, y: 0, z: 0}
   camaraAnimator: {fileID: 7610709316724236959}
-  JumpForce: 0
+  JumpForce: 65
 --- !u!114 &7610709316132160261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26bd094ff3120554197b05e5bb23f758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DashSpeed: 25
+  DashSpeed: 4
   DashTime: 0.3
   dash_Timer: 0
   current_dashTimer: 2
@@ -200,7 +246,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7610709316132160257}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -218,10 +264,22 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5247291
-  m_Height: 3.327057
+  m_Radius: 0.5
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0.029341342, y: -0.9632263, z: 0.2704512}
+--- !u!114 &1705233648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610709316132160257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c80b66a7210bdf40b7107775585b597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7610709316366177261
 GameObject:
   m_ObjectHideFlags: 0

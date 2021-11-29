@@ -28,9 +28,6 @@ public class NPCWaypoints : Waypoints
             Instantiate(heartparticles, spawnParticlesHeart.position, spawnParticlesHeart.rotation);
             FindObjectOfType<AudioManager>().Play("Thank You");
             anim.SetBool("Happy", true);
-            //startChronometer = true;
-            //CharacterAnimationInteraction targetPoints = playerTarget.GetComponent<CharacterAnimationInteraction>();
-            //targetPoints.currentHappyPoints += happyPoints;
             Debug.Log("Has liberado a " + happyPoints + " colegas.");
         }    
     }
@@ -43,11 +40,6 @@ public class NPCWaypoints : Waypoints
             transform.Translate(new Vector3(0, 0, 2 * Time.deltaTime));
             base.Update();
         }
-
-        //if (startChronometer == true )
-        //{
-        //    chronometer += Time.deltaTime;
-        //}
     }
 
     public override void EndAnimation()
@@ -57,7 +49,10 @@ public class NPCWaypoints : Waypoints
 
     public override void IsFighting()
     {
-        
+    }
+
+    public override void IsWalking()
+    {
     }
 
     public override void MaxIndex()

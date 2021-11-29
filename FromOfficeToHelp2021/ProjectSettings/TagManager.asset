@@ -9,6 +9,7 @@ TagManager:
   - PrefabJames
   - PlayerBullet
   - NPC
+  - LockedDoor
   layers:
   - Default
   - TransparentFX

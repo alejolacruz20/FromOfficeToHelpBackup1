@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class NPcOpen : MonoBehaviour
 {
+    // NPC HACIA EL ELEVADOR 
+
     public Animator anim;
     public GameObject playerBlock;
 
     private void Start()
     {
-        anim.SetBool("Open", false);
+        anim.SetBool("OpenDoor", false);
         anim = GetComponent<Animator>();
         playerBlock.SetActive(true);
     }
@@ -18,14 +20,14 @@ public class NPcOpen : MonoBehaviour
     {
         if(target.tag == "NPC")
         {
-            anim.SetBool("Open", true);
+            anim.SetBool("OpenDoor", true);
         }
 
-        if (Blocked_Door.finalTaken == true && Blocked_Door.taken == true)
+        if (Blocked_Door.finalTaken == true)
         {
             playerBlock.SetActive(false);
             FindObjectOfType<AudioManager>().Play("ElevatorRingBell");
-            anim.SetBool("Open", true);
+            anim.SetBool("OpenDoor", true);
         }
     }
 
@@ -33,7 +35,7 @@ public class NPcOpen : MonoBehaviour
     {
         if (target.tag == "NPC")
         {
-            anim.SetBool("Open", false);
+            anim.SetBool("OpenDoor", false);
         }
     }
 }

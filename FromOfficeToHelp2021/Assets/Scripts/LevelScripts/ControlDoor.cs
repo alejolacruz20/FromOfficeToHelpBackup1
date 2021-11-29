@@ -1,28 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 //Creador: Alejo Lacruz
 public class ControlDoor : MonoBehaviour
 {
+  //PUERTA BASE 
+    Action Door;
     Animator anim;
-    bool Dentro = false;
     bool puerta;
     AudioManager AudioManager;
+    public static bool taken = false;
+    //public bool finalTaken = false;
+    public GameObject selfDoor;
+    public bool lockDoorIsOpen;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         AudioManager = FindObjectOfType<AudioManager>();
+        Door = DoorClosed;
     }
 
     private void OnTriggerExit(Collider col)
     {
-        if(col.tag == "Player")
-        {
-            Dentro = false;
-        }
-
         if (col.tag == "NPC")
         {
             anim.SetBool("OpenDoor", false);
@@ -32,13 +34,8 @@ public class ControlDoor : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-       if(col.tag == "Player")
-       {
-           Dentro = true;
-       }
-
-       if(col.tag == "NPC")
-       {
+        if (col.tag == "NPC")
+        {
             puerta = !puerta;
             AudioManager.Play("OpenDoor");
 
@@ -50,23 +47,56 @@ public class ControlDoor : MonoBehaviour
             {
                 anim.SetBool("OpenDoor", false);
             }
-       }
+        }
+    }
+
+    private void OnTriggerStay(Collider col)
+    {
+        if (col.tag == "Player")
+        {
+            if (selfDoor.CompareTag("LockedDoor"))
+            {
+                if (Input.GetKeyDown(KeyCode.E) && taken)
+                {
+                    lockDoorIsOpen = true;
+                    taken = false;
+                    AudioManager.Play("UnlockDoor");
+                    Door = DoorOpen;
+                }
+                else
+                {
+                    if (!lockDoorIsOpen)
+                    {
+                        AudioManager.Play("Blocked Door");
+                    }
+                    
+                }
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    AudioManager.Play("OpenDoor");
+                    Door = DoorOpen;
+                }
+            }   
+        }
     }
 
     private void Update()
     {
-        if(Dentro && Input.GetKeyDown(KeyCode.E))
-        {
-            puerta = !puerta;
-            AudioManager.Play("OpenDoor");
-        }
-        if(puerta)
-        {
-            anim.SetBool("OpenDoor", true);
-        }
-        else
-        {
-            anim.SetBool("OpenDoor", false);
-        }
+        Door();
     }
+
+    void DoorOpen()
+    {
+        anim.SetBool("OpenDoor", true);
+    }
+
+    void DoorClosed()
+    {
+        anim.SetBool("OpenDoor", false);
+    }
+
+    //ME GUSTA EL PAN UWU
 }
