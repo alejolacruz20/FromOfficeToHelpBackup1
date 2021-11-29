@@ -2,22 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlPalanca : Control_Llave
+public class ControlPalanca : MonoBehaviour, IgeneralPickUp
 {
-    AudioManager AudioManager;
-
-    private void Start()
+    public void Actions()
     {
-        AudioManager = FindObjectOfType<AudioManager>();
-    }
-
-    public override void Update()
-    {
-        if (inside)
-        {
-            CentroEnergia.playerHaveTheLever = true;
-            AudioManager.Play("Pickup");
-            rend.gameObject.SetActive(false);
-        }
+        CentroEnergia.playerHaveTheLever = true;
+        Destroy(this.gameObject);
     }
 }

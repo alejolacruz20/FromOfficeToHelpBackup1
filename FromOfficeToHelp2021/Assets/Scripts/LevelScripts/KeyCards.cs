@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlConnector : MonoBehaviour, IgeneralPickUp
+public class KeyCards : MonoBehaviour, IgeneralPickUp
 {
+    public int index;
 
     public void Actions() 
     {
-        CentroEnergia.playerHaveTheConnector = true;
+        KeyInventory.keys[index] = true;
         Destroy(this.gameObject);
-    } 
-
-  
-
+    }
 }

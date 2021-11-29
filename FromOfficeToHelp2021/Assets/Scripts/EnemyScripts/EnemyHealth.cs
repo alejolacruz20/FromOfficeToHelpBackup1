@@ -18,21 +18,12 @@ public class EnemyHealth : GeneralEntitiesLife
         if (randomMovement != null)
         {
             randomMovement.enabled = false;
-            //anim.SetBool("Freedom", true);
-            //base.Death();
         }
         else if (waypointsMovement != null)
         {
             waypointsMovement.enabled = false;
-            //anim.SetBool("Freedom", true);
-            //base.Death();
         }
 
-        //if(spawnDeathParticles == true)
-        //{
-        //    Instantiate(deathParticles, spawnParticlePoint.position, spawnParticlePoint.rotation);
-        //    spawnDeathParticles = false;
-        //}
         anim.SetBool("Hit", true);
         anim.SetBool("Freedom", true);
         base.ZeroLife();

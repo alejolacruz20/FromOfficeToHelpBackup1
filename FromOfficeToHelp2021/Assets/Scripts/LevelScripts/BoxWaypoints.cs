@@ -27,15 +27,12 @@ public class BoxWaypoints : MonoBehaviour
      
     public void IncreaseIndex()
     {
-        
-        
-            _waypointIndex++;
-            if (_waypointIndex >= waypoints.Length)
-            {
-                MaxIndex();
-            }
-            transform.LookAt(waypoints[_waypointIndex].position);
-        
+      _waypointIndex++;
+      if (_waypointIndex >= waypoints.Length)
+      {
+       MaxIndex();
+      }
+      transform.LookAt(waypoints[_waypointIndex].position);
     }
 
     public virtual void MaxIndex()

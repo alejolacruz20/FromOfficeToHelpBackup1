@@ -28,7 +28,6 @@ public class CajaMovement : MonoBehaviour
         }
     }
 
-
     public void DegreeVariation(int amount) 
     {
         degree = amount;
