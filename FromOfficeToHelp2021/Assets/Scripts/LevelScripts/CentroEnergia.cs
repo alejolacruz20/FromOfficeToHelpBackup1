@@ -1,6 +1,7 @@
 ﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CentroEnergia : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class CentroEnergia : MonoBehaviour
     public Renderer[] cables;
     public GameObject lever;
     public int LeverOrientation = 0;
-    public Animator PalancaInterruptor; 
+    public Animator PalancaInterruptor;
+    [SerializeField]
+    private Text _pulseE;
     
     void Start()
     {
@@ -20,6 +23,7 @@ public class CentroEnergia : MonoBehaviour
         playerHaveTheLever = false;
         theConnectorIsConnected = false;
         theLeverIsConnected = false;
+        _pulseE.enabled = false;
     }
 
     // Update is called once per frame
@@ -43,6 +47,11 @@ public class CentroEnergia : MonoBehaviour
 
     private void OnTriggerStay(Collider target)
     {
+        if(target.CompareTag("Player"))
+        {
+            _pulseE.enabled = true;
+        }
+        
         if (target.CompareTag("Player"))
         {
             if (theConnectorIsConnected == false && playerHaveTheConnector == true && Input.GetKeyDown(KeyCode.E))
@@ -78,6 +87,10 @@ public class CentroEnergia : MonoBehaviour
                 }
             }
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        _pulseE.enabled = false;
     }
 
     //private void OnTriggerEnter(Collider target)

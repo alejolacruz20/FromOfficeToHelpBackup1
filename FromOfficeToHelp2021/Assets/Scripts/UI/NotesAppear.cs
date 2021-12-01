@@ -12,14 +12,22 @@ public class NotesAppear : MonoBehaviour
     private Image _cartel;
     [SerializeField]
     private Image _backgroundCartel;
+    [SerializeField]
+    private Text _pulseE;
 
     private void Start()
     {
         paperOnFace = false;
-    }
+        _pulseE.enabled = false;
+}
 
     void OnTriggerStay(Collider other)
     {
+        if (other.CompareTag("Player"))
+        {
+            _pulseE.enabled = true;
+        }
+
         if (Input.GetButtonDown(buttonName) && paperOnFace == false)
         {
             cartelCollider.enabled = false;
@@ -41,6 +49,8 @@ public class NotesAppear : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
+        _pulseE.enabled = false;
+
         if (other.CompareTag("Player"))
         {
             cartelCollider.enabled = true;
