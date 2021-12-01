@@ -2952,6 +2952,7 @@ RectTransform:
   - {fileID: 1652195529}
   - {fileID: 1416775920}
   - {fileID: 366731533}
+  - {fileID: 2112825179}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12684,6 +12685,7 @@ MonoBehaviour:
   cartelCollider: {fileID: 1435592202}
   _cartel: {fileID: 706730665}
   _backgroundCartel: {fileID: 0}
+  _pulseE: {fileID: 2112825180}
 --- !u!1001 &832077855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33200,6 +33202,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2111136334}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2112825178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2112825179}
+  - component: {fileID: 2112825181}
+  - component: {fileID: 2112825180}
+  m_Layer: 5
+  m_Name: Pulsar E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2112825179
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112825178}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2686305, y: 0.2686305, z: 0.2686305}
+  m_Children: []
+  m_Father: {fileID: 229241084}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 33.00003, y: -160}
+  m_SizeDelta: {x: 871.40015, y: -300.60004}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2112825180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112825178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 100
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: PULSA E PARA INTERACTUAR
+--- !u!222 &2112825181
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112825178}
+  m_CullTransparentMesh: 0
 --- !u!1001 &2113432131
 PrefabInstance:
   m_ObjectHideFlags: 0
