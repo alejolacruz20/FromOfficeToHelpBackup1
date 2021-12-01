@@ -12,6 +12,7 @@ public class ActivatedScreens : MonoBehaviour
     public Renderer anotadorFinal;
     public GameObject anotadorFinalObject;
     public GameObject happyParticles;
+    public AudioSource audioclipHappiness;
     bool dontSpawn = false;
 
     void Start()
@@ -24,8 +25,10 @@ public class ActivatedScreens : MonoBehaviour
         for (int i = 0; i < screens.Length; i++)
         {
             activatedScreens = screens[i].GetComponent<ScreensButtons>();
+
             if (activatedScreens.analyzed == false)
             {
+
                 if (activatedScreens.activated == true)
                 {
                     activatedScreensList.Add(screens[i]);
@@ -49,8 +52,9 @@ public class ActivatedScreens : MonoBehaviour
                 for (int k = 0; k < happyPointsSpawner.Length; k++)
                 {
                     Instantiate(happyParticles, happyPointsSpawner[k].transform.position, happyPointsSpawner[k].transform.rotation);
+                    audioclipHappiness.Play();
 
-                    if(k == happyPointsSpawner.Length - 1)
+                    if (k == happyPointsSpawner.Length - 1)
                     {
                         dontSpawn = true;
                     }
