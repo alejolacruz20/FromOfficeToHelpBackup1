@@ -10,6 +10,7 @@ public class NPCWaypoints : Waypoints
     public float chronometer;
     public float limitChronometer;
     public int happyPoints;
+    public static int npcCounterLevel1;
     CharacterAnimationInteraction targetPoints;
     public Transform spawnParticlesHeart;
     public ParticleSystem heartparticles;
@@ -18,6 +19,7 @@ public class NPCWaypoints : Waypoints
     {
         _waypointIndex = 0;
         targetPoints = playerTarget.GetComponent<CharacterAnimationInteraction>();
+        npcCounterLevel1 = 0;
     }
 
     private void OnTriggerEnter(Collider target)
@@ -27,6 +29,7 @@ public class NPCWaypoints : Waypoints
             isHappy = true;
             Instantiate(heartparticles, spawnParticlesHeart.position, spawnParticlesHeart.rotation);
             FindObjectOfType<AudioManager>().Play("Thank You");
+            npcCounterLevel1++;
             anim.SetBool("Happy", true);
             Debug.Log("Has liberado a " + happyPoints + " colegas.");
         }    
