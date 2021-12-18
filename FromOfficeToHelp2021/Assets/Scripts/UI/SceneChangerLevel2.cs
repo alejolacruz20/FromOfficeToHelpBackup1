@@ -19,6 +19,8 @@ public class SceneChangerLevel2 : MonoBehaviour
             uiAnim.SetBool("Transition", true);
             Blocked_Door.taken = false;
             Blocked_Door.finalTaken = false;
+            NoteCounter.noteCounterLevel1 = 0;
+            NPCWaypoints.npcCounterLevel1 = 0;
             //victory = true;
             //myPlayer.transform.position = myTransform.transform.position;
             ChangesScene(word);

@@ -22,6 +22,7 @@ public class ScreensButtons : MonoBehaviour
             activated = true;
             crazyRend.enabled = false;
             happyRend.enabled = true;
+            NPCWaypoints.npcCounterLevel1++;
         }
     }
 }
