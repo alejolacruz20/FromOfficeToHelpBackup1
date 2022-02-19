@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class TestCamara : MonoBehaviour
 {
+    //CREADOR: LUCAS OLIVARES
+
+
     Transform camCuerpo;
     bool startNextRot = true;
     public bool rotRight;
-    public float yaw;
-    public float pitch;
-    public float secondsToRot;
-    public float rotSwitchTime;
+    public float yaw;          //valor para el angulo de rotacion 
+    public float pitch;        //Valor para al angulo vertical de la camara 
+    public float secondsToRot; //Tiempo que toma en hacer una rotacion segun yaw
+    public float rotSwitchTime;//Tiempo de esperauna vez hecho una rotacion para iniciar la siguiente
 
     // Start is called before the first frame update
     void Start()
@@ -22,33 +25,35 @@ public class TestCamara : MonoBehaviour
 
     void Update()
     {
+        // AQUI AMBAS LINEAS FUNCIONAN COMO UN LOOP VA A LA IZQUIERDA CON EL PRIMER "IF", LUEGO VUELVE CON EL SEGUNNDO "ELSE IF"
+
         if (startNextRot && rotRight)
         {
-            StartCoroutine(Rotate(yaw,secondsToRot));
+            StartCoroutine(Rotate(yaw,secondsToRot)); //Funcion que inicia la rotacion 
         }
         else if (startNextRot && !rotRight)
         {
-            StartCoroutine(Rotate(-yaw, secondsToRot));
+            StartCoroutine(Rotate(-yaw, secondsToRot)); //Funcion que inicia la regresion de la rotacion 
         }
     }
 
     // Update is called once per frame
-    IEnumerator Rotate(float yaw, float duration)
+    IEnumerator Rotate(float yaw, float duration) //Co-rutina que dispara el movimento de la camara 
     {
         startNextRot = false;
 
         Quaternion initialRotation = transform.rotation;
 
-        float timer = 0;
+        float timer = 0; 
 
-        while (timer < duration) 
+        while (timer < duration) //La velocidad con la que genera una rotaacion dependera del tiempo dentro del codigo
         {
             timer += Time.deltaTime;
             transform.rotation = initialRotation * Quaternion.AngleAxis(timer / duration * yaw, Vector3.up);
             yield return null;
         }
 
-        yield return new WaitForSeconds(rotSwitchTime);
+        yield return new WaitForSeconds(rotSwitchTime); //Tiempo que espera para volver a rotar 
 
         startNextRot = true;
         rotRight = !rotRight;
