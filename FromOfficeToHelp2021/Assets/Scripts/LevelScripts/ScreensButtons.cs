@@ -7,6 +7,7 @@ public class ScreensButtons : MonoBehaviour
     public bool activated;
     public bool analyzed;
     public Renderer crazyRend;
+    public GameObject crazyRendObject;
     public Renderer happyRend;
 
     void Start()
@@ -21,6 +22,7 @@ public class ScreensButtons : MonoBehaviour
         {
             activated = true;
             crazyRend.enabled = false;
+            Destroy(crazyRendObject);
             happyRend.enabled = true;
             NPCWaypoints.npcCounterLevel1++;
         }
