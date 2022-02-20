@@ -14,7 +14,7 @@ public class TestCamara : MonoBehaviour
     public float secondsToRot; //Tiempo que toma en hacer una rotacion.
     public float rotSwitchTime;//Tiempo de espera una vez hecho una rotacion para iniciar la siguiente.
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         camCuerpo = transform.GetChild(0);
