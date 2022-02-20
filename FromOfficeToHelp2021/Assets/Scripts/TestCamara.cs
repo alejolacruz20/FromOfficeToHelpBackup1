@@ -6,14 +6,13 @@ public class TestCamara : MonoBehaviour
 {
     //CREADOR: LUCAS OLIVARES
 
-
     Transform camCuerpo;
     bool startNextRot = true;
     public bool rotRight;
-    public float yaw;          //valor para el angulo de rotacion 
-    public float pitch;        //Valor para al angulo vertical de la camara 
-    public float secondsToRot; //Tiempo que toma en hacer una rotacion segun yaw
-    public float rotSwitchTime;//Tiempo de esperauna vez hecho una rotacion para iniciar la siguiente
+    public float yaw;          //valor para el angulo de rotacion. 
+    public float pitch;        //Valor para al angulo vertical de la camara.
+    public float secondsToRot; //Tiempo que toma en hacer una rotacion.
+    public float rotSwitchTime;//Tiempo de espera una vez hecho una rotacion para iniciar la siguiente.
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +24,7 @@ public class TestCamara : MonoBehaviour
 
     void Update()
     {
-        // AQUI AMBAS LINEAS FUNCIONAN COMO UN LOOP VA A LA IZQUIERDA CON EL PRIMER "IF", LUEGO VUELVE CON EL SEGUNNDO "ELSE IF"
+        //AQUI AMBAS LINEAS FUNCIONAN COMO UN LOOP VA A LA IZQUIERDA CON EL PRIMER "IF", LUEGO VUELVE CON EL SEGUNNDO "ELSE IF"
 
         if (startNextRot && rotRight)
         {

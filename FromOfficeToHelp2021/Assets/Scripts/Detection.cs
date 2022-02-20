@@ -13,21 +13,20 @@ public class Detection : MonoBehaviour
     {
         lens = transform.parent.GetComponent<Transform>();
         playerTag = GameObject.FindGameObjectWithTag("Player").tag;
-        Debug.Log("GameObject Encontrado " + GameObject.FindGameObjectWithTag("Player")); // Este debug es para encontrar al jugaodor.
+        //Debug.Log("GameObject Encontrado " + GameObject.FindGameObjectWithTag("Player"));
     }
 
-
-    void OnTriggerStay(Collider col) //En esta parte por alguna razon al colisionar con el player el raycast no lo detecta, quizas por mi poca experiencia usando Raycast, no estoy seguro.
+    void OnTriggerStay(Collider col)
     {
         if (col.gameObject.tag == playerTag)
         {
             Vector3 direction = col.transform.position - lens.position;
             RaycastHit hit;
-            Debug.DrawLine(lens.transform.position, direction.normalized, Color.green);// Aqui intene que el raycast sea visible pero falle en el intento.
+            Debug.DrawRay(lens.transform.position, direction.normalized, Color.red, 20f);
 
-            if (Physics.Raycast(lens.transform.position, direction.normalized, out hit, 1000)) //Posicion y longitud de salida del raycast.
+            if (Physics.Raycast(lens.transform.position, direction.normalized, out hit, 1000f))
             {
-                Debug.Log(hit.collider.name); //Si choca con el player deberia de enviar un mensaje a la consola. 
+                Debug.Log(col.gameObject.name);
             }
         }
     }
