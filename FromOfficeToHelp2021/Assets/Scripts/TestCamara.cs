@@ -8,11 +8,18 @@ public class TestCamara : MonoBehaviour
 
     Transform camCuerpo;
     bool startNextRot = true;
-    public bool rotRight;
-    public float yaw;          //valor para el angulo de rotacion. 
-    public float pitch;        //Valor para al angulo vertical de la camara.
-    public float secondsToRot; //Tiempo que toma en hacer una rotacion.
-    public float rotSwitchTime;//Tiempo de espera una vez hecho una rotacion para iniciar la siguiente.
+
+    [SerializeField]
+    private bool rotRight;
+    [SerializeField]
+    private float yaw;          //valor para el angulo de rotacion. 
+    [SerializeField]
+    private float pitch;        //Valor para al angulo vertical de la camara.
+    [SerializeField]
+    private float secondsToRot; //Tiempo que toma en hacer una rotacion.
+    [SerializeField]
+    private float rotSwitchTime;//Tiempo de espera una vez hecho una rotacion para iniciar la siguiente.
+
  
     void Start()
     {
@@ -55,7 +62,7 @@ public class TestCamara : MonoBehaviour
         startNextRot = true;
         rotRight = !rotRight;
     }
-    void SetUpStartRotation() 
+    public void SetUpStartRotation() 
     {
         if (rotRight)
         {
@@ -66,4 +73,9 @@ public class TestCamara : MonoBehaviour
             transform.localRotation = Quaternion.AngleAxis(yaw / 2, Vector3.up);
         }
     }
+
+    //public void AbortPatrol() 
+    //{
+    //    StopAllCoroutines();
+    //}
 }

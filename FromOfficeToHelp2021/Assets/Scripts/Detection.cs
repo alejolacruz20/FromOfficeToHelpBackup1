@@ -14,17 +14,66 @@ public class Detection : MonoBehaviour
     private float      raycastDistance;
     [SerializeField]
     private RaycastHit raycastHit;
+    //[SerializeField]
+    //private TestCamara testCamara;
+    [SerializeField]
+    private float detectionTime;
+    //[SerializeField]
+    //private bool inSight = false;
 
-    private void OnTriggerStay(Collider other)
+    private bool isPatrolling;
+
+
+    private void Awake()
     {
-        if (Physics.Raycast(raycastPoint.position, other.transform.position - raycastPoint.position, out raycastHit,raycastDistance, raycastLayers))
-        {
-            Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.red, 20f);
+        isPatrolling = true;
+    }
 
-            if (raycastHit.collider == other)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isPatrolling)
+        {
+            if (Physics.Raycast(raycastPoint.position, other.transform.position - raycastPoint.position, out raycastHit, raycastDistance, raycastLayers))
             {
-                Debug.Log(other.gameObject.name);
+                Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.red, 2f);
+
+                if (raycastHit.collider == other)
+                {
+                    Debug.Log(other.gameObject.name);
+                    TimeDetection();
+                }
+            }
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (isPatrolling)
+        {
+            if (Physics.Raycast(raycastPoint.position, other.transform.position - raycastPoint.position, out raycastHit, raycastDistance, raycastLayers))
+            {
+                Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.magenta, 2f);
             }
         }
     }
+
+
+    void TimeDetection() 
+    {
+        detectionTime = Time.deltaTime;
+              
+        if (detectionTime >= 3f)
+        {
+            Debug.Log("Suena la alarma ");
+        }
+        else
+        {
+            Debug.Log("No suena la alarma ");
+        }
+    }
+
+    
+   
+        
+    
 }

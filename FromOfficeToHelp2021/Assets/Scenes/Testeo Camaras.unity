@@ -373,13 +373,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!43 &924667198
+--- !u!43 &1172673579
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1752
+  m_Name: pb_Mesh-1480
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -762,12 +762,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 924667198}
+      objectReference: {fileID: 1172673579}
     - target: {fileID: 4872521001901921271, guid: c5842f77c05428d4e9485f617a6e5a30,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 924667198}
+      objectReference: {fileID: 1172673579}
     - target: {fileID: 6040945141012722341, guid: c5842f77c05428d4e9485f617a6e5a30,
         type: 3}
       propertyPath: m_LocalPosition.x
