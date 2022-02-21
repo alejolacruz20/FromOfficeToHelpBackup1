@@ -13,8 +13,7 @@ public class TestCamara : MonoBehaviour
     public float pitch;        //Valor para al angulo vertical de la camara.
     public float secondsToRot; //Tiempo que toma en hacer una rotacion.
     public float rotSwitchTime;//Tiempo de espera una vez hecho una rotacion para iniciar la siguiente.
-
-    
+ 
     void Start()
     {
         camCuerpo = transform.GetChild(0);
@@ -36,7 +35,6 @@ public class TestCamara : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     IEnumerator Rotate(float yaw, float duration) //Co-rutina que dispara el movimento de la camara 
     {
         startNextRot = false;
@@ -57,7 +55,6 @@ public class TestCamara : MonoBehaviour
         startNextRot = true;
         rotRight = !rotRight;
     }
-
     void SetUpStartRotation() 
     {
         if (rotRight)

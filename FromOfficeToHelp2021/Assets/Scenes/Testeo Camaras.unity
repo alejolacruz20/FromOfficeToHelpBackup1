@@ -379,7 +379,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-9088
+  m_Name: pb_Mesh-1752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -748,6 +748,16 @@ PrefabInstance:
       propertyPath: secondsToRot
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3353335527278135907, guid: c5842f77c05428d4e9485f617a6e5a30,
+        type: 3}
+      propertyPath: rotSwitchTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641706801293332396, guid: c5842f77c05428d4e9485f617a6e5a30,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.09
+      objectReference: {fileID: 0}
     - target: {fileID: 4836147862862938328, guid: c5842f77c05428d4e9485f617a6e5a30,
         type: 3}
       propertyPath: m_Mesh
@@ -847,6 +857,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104980803452158202, guid: c5842f77c05428d4e9485f617a6e5a30,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104980803452158202, guid: c5842f77c05428d4e9485f617a6e5a30,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5842f77c05428d4e9485f617a6e5a30, type: 3}
