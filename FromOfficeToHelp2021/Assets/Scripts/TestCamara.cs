@@ -20,7 +20,7 @@ public class TestCamara : MonoBehaviour
     [SerializeField]
     private float rotSwitchTime;//Tiempo de espera una vez hecho una rotacion para iniciar la siguiente.
 
- 
+
     void Start()
     {
         camCuerpo = transform.GetChild(0);
@@ -40,6 +40,7 @@ public class TestCamara : MonoBehaviour
         {
             StartCoroutine(Rotate(-yaw, secondsToRot)); //Funcion que inicia la regresion de la rotacion 
         }
+        
     }
 
     IEnumerator Rotate(float yaw, float duration) //Co-rutina que dispara el movimento de la camara 
@@ -53,7 +54,7 @@ public class TestCamara : MonoBehaviour
         while (timer < duration) //La velocidad con la que genera una rotaacion dependera del tiempo dentro del codigo
         {
             timer += Time.deltaTime;
-            transform.rotation = initialRotation * Quaternion.AngleAxis(timer / duration * yaw, Vector3.up);
+            transform.rotation = initialRotation * Quaternion.AngleAxis(timer / duration * yaw, Vector3.up); 
             yield return null;
         }
 
@@ -62,20 +63,16 @@ public class TestCamara : MonoBehaviour
         startNextRot = true;
         rotRight = !rotRight;
     }
-    public void SetUpStartRotation() 
-    {
-        if (rotRight)
-        {
-            transform.localRotation = Quaternion.AngleAxis(-yaw / 2, Vector3.up);
-        }
-        else
-        {
-            transform.localRotation = Quaternion.AngleAxis(yaw / 2, Vector3.up);
-        }
-    }
 
-    //public void AbortPatrol() 
-    //{
-    //    StopAllCoroutines();
-    //}
+    public void SetUpStartRotation() //CO-RUTINA 
+    {
+            if (rotRight)
+            {
+                transform.localRotation = Quaternion.AngleAxis(-yaw / 2, Vector3.up);
+            }
+            else
+            {
+                transform.localRotation = Quaternion.AngleAxis(yaw / 2, Vector3.up);
+            }
+    } 
 }
