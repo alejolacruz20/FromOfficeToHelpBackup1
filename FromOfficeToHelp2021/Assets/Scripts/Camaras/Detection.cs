@@ -52,10 +52,6 @@ public class Detection : MonoBehaviour
                     inSight = true;
                     PlayerDetection();
                 }
-                else
-                {
-                    inSight = false;
-                }
             }
         }
     }
@@ -77,11 +73,11 @@ public class Detection : MonoBehaviour
         }
     }
 
-    public void PlayerDetection() 
+    public void PlayerDetection() //FUNCION QUE LLAMA A LOS GUARDIAS 
     {
         if (inSight && timer >= 3f)
         {
-            Debug.Log("LLAMAR GUARDIAS UWU"); 
+            Debug.Log("LLAMAR GUARDIAS "); 
 
         }
     }
