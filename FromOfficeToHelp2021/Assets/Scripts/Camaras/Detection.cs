@@ -19,7 +19,12 @@ public class Detection : MonoBehaviour
     [SerializeField]
     public bool inSight;
     [SerializeField]
-    private float timer;
+    private float      timer;
+    [SerializeField]
+    GameObject guardias;
+    [SerializeField]
+    private Transform origenGuardia;
+
 
     private bool isPatrolling;
 
@@ -77,8 +82,8 @@ public class Detection : MonoBehaviour
     {
         if (inSight && timer >= 3f)
         {
+            Instantiate(guardias);
             Debug.Log("LLAMAR GUARDIAS "); 
-
         }
     }
 }
