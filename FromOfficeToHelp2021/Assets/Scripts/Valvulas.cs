@@ -8,6 +8,8 @@ public class Valvulas : MonoBehaviour
     public ControladorValvulas controlador;
     public int valores;
     public bool activado;
+    [SerializeField]
+    public Animator anime;
 
     private void OnTriggerStay(Collider target)
     {

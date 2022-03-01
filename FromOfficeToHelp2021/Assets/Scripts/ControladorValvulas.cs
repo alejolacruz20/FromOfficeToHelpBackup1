@@ -5,7 +5,8 @@ using UnityEngine;
 public class ControladorValvulas : MonoBehaviour
 {
     public GameObject[] levers;
-    public List<int> values;
+    [SerializeField]
+    public  List<int> values;
 
     void Start()
     {
