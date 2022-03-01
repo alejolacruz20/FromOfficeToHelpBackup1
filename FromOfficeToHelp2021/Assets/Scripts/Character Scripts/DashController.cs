@@ -42,8 +42,8 @@ public class DashController : MonoBehaviour
             canDash = false;
             dash_Timer = 0f;
             float StartTime = Time.time;
-            anim.SetBool("Dash", true);
-            AudioManager.Play("Dash"); //Reproducimos el sonido
+            anim.SetBool("Dash", true); //ANIMACION UI
+            AudioManager.Play("Dash"); //Reproducimos el sonido 
             MoveScript.speed *= DashSpeed; //Movimiento del dash
             yield return new WaitForSeconds(DashTime);
             MoveScript.speed /= DashSpeed; //Movimiento del dash
