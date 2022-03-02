@@ -9,7 +9,7 @@ public class Valvulas : MonoBehaviour
     public int valores;
     public bool activado;
     [SerializeField]
-    public Animator anime;
+    public Animator animator;
 
     private void OnTriggerStay(Collider target)
     {
@@ -17,6 +17,10 @@ public class Valvulas : MonoBehaviour
         {
             controlador.values.Add(valores);
             activado = true;
+            animator.SetBool("Character", true);
+            animator.SetBool("WrongCombination", false);
+
+            //REPRODUCIR UN SONIDO
         }
     }
 }
