@@ -6,11 +6,11 @@ using System;
 //Creador: Gabriel Ceriani y Tiago Zedde
 public class Waypoints : MonoBehaviour
 {
-    public Transform[] waypoints;
+    public Transform[] waypoints; //ESTE
     public int speed;
-    protected int _waypointIndex;
+    protected int _waypointIndex; //ESTE
     public float dist;
-    public bool fightingPlayer = false;
+    public bool fightingPlayer = false; 
     public GameObject playerTarget;
     public Animator anim;
     public float minDistance;

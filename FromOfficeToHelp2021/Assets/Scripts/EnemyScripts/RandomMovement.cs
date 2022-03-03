@@ -64,7 +64,7 @@ public class RandomMovement : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, target.transform.position) > mediumVision && !inAttack == false)
+            if (Vector3.Distance(transform.position, target.transform.position) > mediumVision && !inAttack == false) 
             {
                 movementAndAttack.SetBool("Attack", false);
                 var lookPosition = target.transform.position - transform.position;
@@ -79,7 +79,7 @@ public class RandomMovement : MonoBehaviour
             else
             {
        
-
+                
                 var lookPosition = target.transform.position - transform.position;
                 lookPosition.y = 0;
                 var rotation = Quaternion.LookRotation(lookPosition);

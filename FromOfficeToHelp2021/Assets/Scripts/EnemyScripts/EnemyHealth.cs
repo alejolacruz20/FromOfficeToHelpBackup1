@@ -10,6 +10,7 @@ public class EnemyHealth : GeneralEntitiesLife
     public bool spawnDeathParticles = true;
     public ParticleSystem deathParticles;
     public Transform spawnParticlePoint;
+    public EnemyNavmeshWaypoints enemyNavmeshWaypoints;
 
     public override void ZeroLife()
     {
