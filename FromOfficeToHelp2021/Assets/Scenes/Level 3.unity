@@ -7130,6 +7130,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262756377}
   m_CullTransparentMesh: 0
+--- !u!114 &263160923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7610709316132160260, guid: 0d5eb8cf0cb28ef4aa07105e48f5b56d,
+    type: 3}
+  m_PrefabInstance: {fileID: 404621032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adca582892d13294d86601bf251b9f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &291504507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8788,6 +8800,11 @@ PrefabInstance:
       propertyPath: "mascaraDa\xF1o"
       value: 
       objectReference: {fileID: 990976307}
+    - target: {fileID: 7610709316132160260, guid: 0d5eb8cf0cb28ef4aa07105e48f5b56d,
+        type: 3}
+      propertyPath: baseHitPoints
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7610709316132160261, guid: 0d5eb8cf0cb28ef4aa07105e48f5b56d,
         type: 3}
       propertyPath: anim
@@ -36310,8 +36327,9 @@ GameObject:
   - component: {fileID: 1434355586}
   - component: {fileID: 1434355585}
   - component: {fileID: 1434355584}
+  - component: {fileID: 1434355587}
   m_Layer: 0
-  m_Name: SmokePiso
+  m_Name: SmokeTecho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41052,6 +41070,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: -270, y: 0, z: 0}
+--- !u!114 &1434355587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434355583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698e321392482f842911a744eea45f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "da\xF1oAmount": 0.015
+  chronometer: 0
+  limitChronometer: 0.1
+  vidaPlayer: {fileID: 263160923}
+  levelChronometer: 0
+  limitLevelChonometer: 300
 --- !u!1 &1434476194
 GameObject:
   m_ObjectHideFlags: 0
