@@ -21,17 +21,20 @@ public class Detection : MonoBehaviour
     [SerializeField]
     private float      timer;
     [SerializeField]
-    GameObject guardias;
-    [SerializeField]
-    private Transform origenGuardia;
+    public GameObject guardias;
+    
+
+    public GameObject[] origenGuardia;
+
+    bool spawnChecker = false; 
 
 
-    private bool isPatrolling;
+    //private bool isPatrolling;
 
 
     private void Awake()
     {
-        isPatrolling = true;
+        //isPatrolling = true;
         inSight = false;
     }
 
@@ -45,11 +48,12 @@ public class Detection : MonoBehaviour
 
     private void OnTriggerStay(Collider other) 
     {
-        if (isPatrolling)
-        {
+        
+
             if (Physics.Raycast(raycastPoint.position, other.transform.position - raycastPoint.position, out raycastHit, raycastDistance, raycastLayers))
             {
                 Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.red, 1f);
+                
 
                 if (raycastHit.collider == other)
                 {
@@ -58,13 +62,11 @@ public class Detection : MonoBehaviour
                     PlayerDetection();
                 }
             }
-        }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (isPatrolling)
-        {
             if (Physics.Raycast(raycastPoint.position, other.transform.position - raycastPoint.position, out raycastHit, raycastDistance, raycastLayers))
             {
                 Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.magenta, 1f);
@@ -73,17 +75,22 @@ public class Detection : MonoBehaviour
                 {
                     inSight = false;
                     timer = 0f;
+                    spawnChecker = false;
                 }
             }
-        }
+        
     }
 
     public void PlayerDetection() //FUNCION QUE LLAMA A LOS GUARDIAS 
     {
-        if (inSight && timer >= 3f)
+        if (inSight && timer >= 3f && spawnChecker == false)
         {
-            Instantiate(guardias);
-            Debug.Log("LLAMAR GUARDIAS "); 
+            for (int i = 0; i < origenGuardia.Length; i++)
+            {
+                Instantiate(guardias, origenGuardia[i].transform.position, origenGuardia[i].transform.rotation);
+            }
+            Debug.Log("LLAMAR GUARDIAS ");
+            spawnChecker = true;
         }
     }
 }
