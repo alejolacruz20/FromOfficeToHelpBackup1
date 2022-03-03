@@ -32,7 +32,6 @@ public class EnemyNavmeshWaypoints : MonoBehaviour
         if (dist < 2f)
         {
             IncreaseIndex();
-            Debug.Log(_indexWaypoint);
         }
         enemyAction?.Invoke();
     }
@@ -49,27 +48,7 @@ public class EnemyNavmeshWaypoints : MonoBehaviour
     public virtual void IsWalking()
     {
         myAgent.SetDestination(waypoints[_indexWaypoint].transform.position); //SETEA DESTINO AL ARRAY 
-
-        if (Vector3.Distance(playerTarget.transform.position, transform.position) < minDistance)
-        {
-            enemyAction = IsFighting;
-        }
     }
 
-    public virtual void IsFighting()
-    {
-
-        if (fightingPlayer == false)
-        {
-            transform.LookAt(new Vector3(playerTarget.transform.position.x, transform.position.y, playerTarget.transform.position.z));
-            Debug.Log("Atacando");
-            anim.SetBool("PlayerAttack", true);
-            fightingPlayer = true;
-        }
-
-        if (Vector3.Distance(playerTarget.transform.position, transform.position) > minDistance)
-        {
-            enemyAction = IsWalking;
-        }
-    }
+   
 }

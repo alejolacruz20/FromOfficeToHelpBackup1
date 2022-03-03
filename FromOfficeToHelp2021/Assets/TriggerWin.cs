@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChangerVictory : MonoBehaviour
+public class TriggerWin : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider target)
+    public KeycardLvL3 keycard;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (target.tag == "Player")
+        if (other && keycard.hasKey)
         {
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene("Level 3");
+            SceneManager.LoadScene("Victory");
         }
     }
 }
+

@@ -4249,6 +4249,7 @@ MonoBehaviour:
   deathParticles: {fileID: 5232917614305118422, guid: b5996d1ca36574341a8ce189b188f932,
     type: 3}
   spawnParticlePoint: {fileID: 1315667069}
+  enemyNavmeshWaypoints: {fileID: 0}
 --- !u!114 &296471124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7505,6 +7506,7 @@ MonoBehaviour:
   deathParticles: {fileID: 5232917614305118422, guid: b5996d1ca36574341a8ce189b188f932,
     type: 3}
   spawnParticlePoint: {fileID: 1449815512}
+  enemyNavmeshWaypoints: {fileID: 0}
 --- !u!114 &519907637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31520,6 +31522,7 @@ MonoBehaviour:
   deathParticles: {fileID: 5232917614305118422, guid: b5996d1ca36574341a8ce189b188f932,
     type: 3}
   spawnParticlePoint: {fileID: 1653563415}
+  enemyNavmeshWaypoints: {fileID: 0}
 --- !u!1 &1955686013
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,9 +10,11 @@ public class ControladorValvulas : MonoBehaviour
     [SerializeField]
     public bool smokeOut = false;
     public SmokeManager smokeManager;
+    AudioManager audioManager;
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         // VERIFICAR QUE LAS PALANCAS ESTEN LA POSICION CORRECTA CON UN BOOL
     }
     
@@ -24,7 +26,8 @@ public class ControladorValvulas : MonoBehaviour
             {
                 print("Todo ok"); //El humo se detiene
                 smokeOut = true;
-                smokeManager.StopSmoke(); 
+                smokeManager.StopSmoke();
+                //audioManager.Play("GasOut"); //Reproducimos el sonido 
             }
             else
             {
