@@ -21,6 +21,7 @@ public class CountdownTimer : MonoBehaviour
 
         if (timeValue <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("Defeat");
         }
     }
