@@ -26,7 +26,7 @@ public class Detection : MonoBehaviour
 
     public GameObject[] origenGuardia;
 
-    bool spawnChecker = false; 
+    public bool spawnChecker = false; 
 
 
     //private bool isPatrolling;
@@ -83,7 +83,7 @@ public class Detection : MonoBehaviour
 
     public virtual void PlayerDetection() //FUNCION QUE LLAMA A LOS GUARDIAS 
     {
-        if (inSight && timer >= 3f && spawnChecker == false)
+        if (inSight && timer >= 2f && spawnChecker == false)
         {
             for (int i = 0; i < origenGuardia.Length; i++)
             {

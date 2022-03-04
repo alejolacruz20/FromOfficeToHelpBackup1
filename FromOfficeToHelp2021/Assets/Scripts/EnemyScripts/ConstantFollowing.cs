@@ -14,6 +14,7 @@ public class ConstantFollowing : MonoBehaviour
     {
         myAgent.speed = runSpeed;
         target = GameObject.Find("Character");
+        vidaPlayer = target.GetComponent<CharacterHealth>();
     }
 
     void Update()

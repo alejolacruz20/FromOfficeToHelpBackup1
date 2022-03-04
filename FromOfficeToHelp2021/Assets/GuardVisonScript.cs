@@ -37,9 +37,11 @@ public class GuardVisonScript : MonoBehaviour
     {
         if (Physics.Raycast(raycastPoint.position, other.transform.position - raycastPoint.position, out raycastHit, raycastDistance, raycastLayers))
         {
-            Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.red, 1f);
+          
             if (other.gameObject.layer == 9)
             {
+                 Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.red, 1f);
+
                 if (raycastHit.collider == other)
                 {
                     Debug.Log(other.gameObject.name);
@@ -54,14 +56,18 @@ public class GuardVisonScript : MonoBehaviour
     {
         if (Physics.Raycast(raycastPoint.position, other.transform.position - raycastPoint.position, out raycastHit, raycastDistance, raycastLayers))
         {
-            Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.magenta, 1f);
-
-            if (raycastHit.collider == other)
+            if (other.gameObject.layer == 9)
             {
-                inSight = false;
-                EnemyNavmeshWaypoints.enemyAction = EnemyNavmeshWaypoints.IsWalking;
-                animator.SetBool("Spotted", false);
-                animator.SetBool("IsRunning", false);
+                Debug.DrawRay(raycastPoint.transform.position, other.transform.position - raycastPoint.position, Color.magenta, 1f);
+
+                        if (raycastHit.collider == other)
+                        {
+                            inSight = false;
+                            EnemyNavmeshWaypoints.enemyAction = EnemyNavmeshWaypoints.IsWalking;
+                            animator.SetBool("Spotted", false);
+                            animator.SetBool("IsRunning", false);
+                        }
+
             }
         }
     }

@@ -15,6 +15,7 @@ public class EnemyNavmeshWaypoints : MonoBehaviour
     public int minDistance;
     public Animator anim;
     public GameObject target;
+    public CharacterHealth vidaPlayer;
 
 
     void Start()
@@ -22,6 +23,8 @@ public class EnemyNavmeshWaypoints : MonoBehaviour
         _indexWaypoint = 0;
         myAgent.speed = 3.5f;
         enemyAction = IsWalking;
+        target = GameObject.Find("Character");
+        vidaPlayer = target.GetComponent<CharacterHealth>();
     }
 
     void Update()
@@ -69,7 +72,15 @@ public class EnemyNavmeshWaypoints : MonoBehaviour
     {
         anim.SetBool("IsRunning", true);
         enemyAction = IsFollowing;
-    } 
+    }
+
+    private void OnCollisionEnter(Collision target)
+    {
+        if (target.gameObject.layer == 9)
+        {
+            vidaPlayer.TakeDamage(100);
+        }
+    }
 }
 
    
