@@ -6,33 +6,31 @@ using System;
 
 public class EnemyNavmeshWaypoints : MonoBehaviour
 {
-    public GameObject playerTarget; //ESTE 
-    protected int _indexWaypoint; //ESTE
-    public Transform[] waypoints; //ESTE
+    public GameObject playerTarget;
+    protected int _indexWaypoint; 
+    public Transform[] waypoints; 
     public float dist;
     public NavMeshAgent myAgent;
-    Action enemyAction;
-    bool fightingPlayer = false;
+    public Action enemyAction;
     public int minDistance;
     public Animator anim;
+    public GameObject target;
 
 
     void Start()
     {
         _indexWaypoint = 0;
-       
         myAgent.speed = 3.5f;
         enemyAction = IsWalking;
     }
 
-    
     void Update()
     {
-        dist = Vector3.Distance(transform.position, waypoints[_indexWaypoint].position);
-        if (dist < 2f)
-        {
-            IncreaseIndex();
-        }
+        //dist = Vector3.Distance(transform.position, waypoints[_indexWaypoint].position);
+        //if (dist < 2f)
+        //{
+        //    IncreaseIndex();
+        //}
         enemyAction?.Invoke();
     }
 
@@ -45,10 +43,33 @@ public class EnemyNavmeshWaypoints : MonoBehaviour
             }
     }
 
-    public virtual void IsWalking()
+    public virtual void IsWalking() 
     {
         myAgent.SetDestination(waypoints[_indexWaypoint].transform.position); //SETEA DESTINO AL ARRAY 
+
+        dist = Vector3.Distance(transform.position, waypoints[_indexWaypoint].position);
+        if (dist < 2f)
+        {
+            IncreaseIndex();
+        }
     }
 
-   
+    public virtual void IsFollowing() 
+    {
+        myAgent.SetDestination(target.transform.position); //SETEA DIRECCION AL JUGADOR 
+    }
+
+    //public virtual void IsStay() 
+    //{
+    //    transform.LookAt(target.transform.position);
+
+    //}
+
+    public virtual void IsRunning() 
+    {
+        anim.SetBool("IsRunning", true);
+        enemyAction = IsFollowing;
+    } 
 }
+
+   

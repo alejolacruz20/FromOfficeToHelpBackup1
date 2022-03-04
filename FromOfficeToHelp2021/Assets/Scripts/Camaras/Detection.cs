@@ -34,7 +34,7 @@ public class Detection : MonoBehaviour
 
     private void Awake()
     {
-        //isPatrolling = true;
+        
         inSight = false;
     }
 
@@ -81,7 +81,7 @@ public class Detection : MonoBehaviour
         
     }
 
-    public void PlayerDetection() //FUNCION QUE LLAMA A LOS GUARDIAS 
+    public virtual void PlayerDetection() //FUNCION QUE LLAMA A LOS GUARDIAS 
     {
         if (inSight && timer >= 3f && spawnChecker == false)
         {
@@ -89,7 +89,7 @@ public class Detection : MonoBehaviour
             {
                 Instantiate(guardias, origenGuardia[i].transform.position, origenGuardia[i].transform.rotation);
             }
-            Debug.Log("LLAMAR GUARDIAS ");
+            Debug.Log("LLAMAR GUARDIAS");
             spawnChecker = true;
         }
     }

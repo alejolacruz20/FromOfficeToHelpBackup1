@@ -20,7 +20,7 @@ public class Valvulas : MonoBehaviour
             animator.SetBool("Character", true);
             animator.SetBool("WrongCombination", false);
 
-            //REPRODUCIR UN SONIDO
+            FindObjectOfType<AudioManager>().Play("GasOut");
         }
     }
 }
