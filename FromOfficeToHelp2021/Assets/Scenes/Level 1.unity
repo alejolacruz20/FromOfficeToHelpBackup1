@@ -4250,6 +4250,7 @@ MonoBehaviour:
     type: 3}
   spawnParticlePoint: {fileID: 1315667069}
   enemyNavmeshWaypoints: {fileID: 0}
+  enemyConstantDamage: {fileID: 296471122}
 --- !u!114 &296471124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7507,6 +7508,7 @@ MonoBehaviour:
     type: 3}
   spawnParticlePoint: {fileID: 1449815512}
   enemyNavmeshWaypoints: {fileID: 0}
+  enemyConstantDamage: {fileID: 519907637}
 --- !u!114 &519907637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31523,6 +31525,7 @@ MonoBehaviour:
     type: 3}
   spawnParticlePoint: {fileID: 1653563415}
   enemyNavmeshWaypoints: {fileID: 0}
+  enemyConstantDamage: {fileID: 0}
 --- !u!1 &1955686013
 GameObject:
   m_ObjectHideFlags: 0

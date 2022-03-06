@@ -15,7 +15,8 @@ public class LockDoors : MonoBehaviour
 
     public void ChangeDoorState() 
     {
-        ActionsDoors = OpenDoor;
+        anim.SetBool("OpenDoor", true);
+        //ActionsDoors = OpenDoor;
         FindObjectOfType<AudioManager>().Play("OpenDoor");
         if (selfDoor.CompareTag("LockedDoor"))
         {
@@ -35,11 +36,12 @@ public class LockDoors : MonoBehaviour
 
     private void Start()
     {
+        anim.SetBool("OpenDoor", false);
         ActionsDoors = CloseDoor;
     }
 
-    void Update()
-    {
-        ActionsDoors();
-    }
+    //void Update()
+    //{
+    //    ActionsDoors();
+    //}
 }

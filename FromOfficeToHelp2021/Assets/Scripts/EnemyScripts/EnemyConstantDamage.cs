@@ -28,11 +28,11 @@ public class EnemyConstantDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyLife.currentHitPoints <= 0f)
-        {
-            slowedDown = false;
-            targetMovement.SpeedVariation(0f);
-        }
+        //if (enemyLife.currentHitPoints <= 0f)
+        //{
+        //    slowedDown = false;
+        //    targetMovement.SpeedVariation(0f);
+        //}
 
         AttackDetection();
 
@@ -47,6 +47,12 @@ public class EnemyConstantDamage : MonoBehaviour
                 chronometerSlowdown = 0; //si se iguala a cero cuando el cronometro termina hace que cuendo el jugador salga del area de relentizacion siga con velocidad reducida hasta que termine el ultimo cronometro, si no se iguala automaticamente vuelve a la normalidad
             }
         }
+    }
+
+    public void DeathDetection()
+    {
+        slowedDown = false;
+        targetMovement.SpeedVariation(0f);
     }
 
     public void AttackDetection()

@@ -13,9 +13,11 @@ public class EnemyHealth : GeneralEntitiesLife
     public ParticleSystem deathParticles;
     public Transform spawnParticlePoint;
     public EnemyNavmeshWaypoints enemyNavmeshWaypoints;
+    public EnemyConstantDamage enemyConstantDamage;
 
     public override void ZeroLife()
     {
+        enemyConstantDamage?.DeathDetection();
         spawnDeathParticles = true;
 
         if (randomMovement != null)
@@ -30,6 +32,7 @@ public class EnemyHealth : GeneralEntitiesLife
         anim.SetBool("Hit", true);
         anim.SetBool("Freedom", true);
         base.ZeroLife();
+        enemyConstantDamage.enabled = false;
     }
 
     public void SpawnParticles()
