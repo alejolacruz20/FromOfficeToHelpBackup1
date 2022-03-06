@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //Creador: Tiago Zedde
+
 public class SceneChanger : MonoBehaviour
 {
     public bool victory = false;

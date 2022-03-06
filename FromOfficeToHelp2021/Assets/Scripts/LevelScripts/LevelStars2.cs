@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: LACRUZ
+
 public class LevelStars2 : MonoBehaviour
 {
     public Animator starAnimLVL2;

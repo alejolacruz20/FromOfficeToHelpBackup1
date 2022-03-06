@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: PARADISO
+
 public class EffectObject : MonoBehaviour
 {
     public float time;

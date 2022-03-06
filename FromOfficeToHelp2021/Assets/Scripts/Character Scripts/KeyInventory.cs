@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: ZEDDE, CERIANI
+
 public class KeyInventory : MonoBehaviour
 {
     public int totalKeys;

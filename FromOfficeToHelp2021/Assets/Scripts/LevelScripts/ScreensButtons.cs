@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: CERIANI, LACRUZ
+
 public class ScreensButtons : MonoBehaviour
 {
     public bool activated;

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: ZEDDE, CERIANI
+
 public class CharacterPickUps : MonoBehaviour
 {
     private void OnTriggerEnter(Collider target)

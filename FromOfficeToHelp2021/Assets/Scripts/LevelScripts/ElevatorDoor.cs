@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: LACRUZ
+
 public class ElevatorDoor : MonoBehaviour
 {
     // ESTE SCRIPT ABRE LA PUERTA DEL JUGADOR AL INICIAR EL NIVEL 

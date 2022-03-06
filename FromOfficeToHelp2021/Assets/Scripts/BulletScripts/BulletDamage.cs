@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletDamage : GeneralHit
 {
+    //TPFINAL: CERIANI
     //Por la herencia tiene el OntriggerEnter 
     //Lo unico que se agrega aca es el movimiento de la bala
     public float speed;

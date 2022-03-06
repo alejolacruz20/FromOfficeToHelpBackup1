@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossHealth : GeneralEntitiesLife
 {
+    //TPFINAL: ZEDDE, OLIVARES, CERIANI
+
     public GameObject victoryZone;
     public Animator anim;
     public static bool downBoss = false;

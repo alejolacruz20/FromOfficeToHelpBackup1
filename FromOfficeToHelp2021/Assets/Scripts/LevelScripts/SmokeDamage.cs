@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: CERIANI, OLIVARES, ZEDDE
+
 public class SmokeDamage : MonoBehaviour
 {
     public float dañoAmount; // Daño que hace cada segundo

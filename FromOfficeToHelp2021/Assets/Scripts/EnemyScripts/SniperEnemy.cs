@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: CERIANI
+
 public class SniperEnemy : MonoBehaviour
 {
     public Transform playerPosition;

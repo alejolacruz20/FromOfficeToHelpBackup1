@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//TPFINAL: CERIANI, ZEDDE
+
 public class CharacterHealth : GeneralEntitiesLife
 {
     public Image healthBar;

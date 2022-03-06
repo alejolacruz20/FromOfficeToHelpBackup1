@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 
 //Creador: Gabriel Ceriani y Tiago Zedde
+
 public class Waypoints : MonoBehaviour
 {
     public Transform[] waypoints; //ESTE

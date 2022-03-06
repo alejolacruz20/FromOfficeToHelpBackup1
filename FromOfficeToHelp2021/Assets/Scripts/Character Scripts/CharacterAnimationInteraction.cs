@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Creador: Alejo Lacruz
+
+//Creador: LACRUZ, ZEDDE, OLIVARES, PARADISO, CERIANI
+
 public class CharacterAnimationInteraction : MonoBehaviour
 {
     public GameObject bullet;

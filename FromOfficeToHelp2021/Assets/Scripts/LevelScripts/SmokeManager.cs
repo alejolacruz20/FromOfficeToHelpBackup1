@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: ZEDDE
+
 public class SmokeManager : MonoBehaviour
 {
     [SerializeField]

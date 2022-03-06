@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 
 //Creador: Alejo Lacruz
+
 public class ControlDoor : MonoBehaviour
 {
   //PUERTA BASE 

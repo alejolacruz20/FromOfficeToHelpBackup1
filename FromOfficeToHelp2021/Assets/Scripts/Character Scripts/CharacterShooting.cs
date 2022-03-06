@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: CERIANI, OLIVARES
+
 public class CharacterShooting : MonoBehaviour
 {
     public string buttonName = "Fire1";

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 //Creador: Federico Paradiso
 public class NotesAppear : MonoBehaviour
 {

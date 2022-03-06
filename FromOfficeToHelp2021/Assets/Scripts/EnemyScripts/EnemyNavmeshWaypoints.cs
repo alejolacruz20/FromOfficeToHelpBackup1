@@ -6,6 +6,8 @@ using System;
 
 public class EnemyNavmeshWaypoints : MonoBehaviour
 {
+    //TPFINAL: ZEDDE, OLIVARES, CERIANI
+
     public GameObject playerTarget;
     protected int _indexWaypoint; 
     public Transform[] waypoints; 

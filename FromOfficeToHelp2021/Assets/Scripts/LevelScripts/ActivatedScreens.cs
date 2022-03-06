@@ -1,23 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ActivatedScreens : MonoBehaviour
 {
+    //TPFINAL: CERIANI, LACRUZ
+
     public GameObject[] screens;
     ScreensButtons activatedScreens;
     public List<GameObject> activatedScreensList;
-    public Animator[] npcAnim;
-    public Transform[] happyPointsSpawner;
-    public Renderer anotadorFinal;
     public GameObject anotadorFinalObject;
-    public GameObject happyParticles;
-    public AudioSource audioclipHappiness;
-    bool dontSpawn = false;
+    public event Action onActivatedScreens;
 
     void Start()
     {
-        //anotadorFinal.enabled = false;
+        anotadorFinalObject.SetActive(false);
     }
 
     void Update()
@@ -39,27 +37,8 @@ public class ActivatedScreens : MonoBehaviour
 
         if (screens.Length == activatedScreensList.Count && anotadorFinalObject != null)
         {
-            //anotadorFinal.enabled = true;
+            onActivatedScreens?.Invoke(); 
             anotadorFinalObject.SetActive(true);
-
-            for (int j = 0; j < npcAnim.Length; j++)
-            {
-                npcAnim[j].SetBool("Happy", true);
-            }
-
-            if (!dontSpawn)
-            {
-                for (int k = 0; k < happyPointsSpawner.Length; k++)
-                {
-                    Instantiate(happyParticles, happyPointsSpawner[k].transform.position, happyPointsSpawner[k].transform.rotation);
-                    audioclipHappiness.Play();
-
-                    if (k == happyPointsSpawner.Length - 1)
-                    {
-                        dontSpawn = true;
-                    }
-                }
-            }
         }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+//TPFINAL: LACRUZ
+
 public class LockDoors : MonoBehaviour
 {
     public int index;

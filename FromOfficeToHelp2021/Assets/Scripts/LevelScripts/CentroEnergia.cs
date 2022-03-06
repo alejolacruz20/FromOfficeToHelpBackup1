@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//TPFINAL: CERIANI
+
 public class CentroEnergia : MonoBehaviour
 {
     public static bool playerHaveTheLever;

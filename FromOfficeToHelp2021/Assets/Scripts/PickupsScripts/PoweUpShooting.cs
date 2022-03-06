@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: CERIANI, ZEDDE
+
 public class PoweUpShooting : MonoBehaviour, IgeneralPickUp
 {
     public CharacterAnimationInteraction characterShooting;

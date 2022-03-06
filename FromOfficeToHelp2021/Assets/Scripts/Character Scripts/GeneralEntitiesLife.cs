@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class GeneralEntitiesLife : MonoBehaviour
 {
+    //TPFINAL: ZEDDE, OLIVARES, CERIANI
+
     public float baseHitPoints;
     public float currentHitPoints;
     public bool startChronometer;

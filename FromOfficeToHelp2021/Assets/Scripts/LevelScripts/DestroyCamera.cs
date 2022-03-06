@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: ZEDDE,OLIVARES
+
+
 public class DestroyCamera : MonoBehaviour
 {
     public GameObject Detector;
-
-    //private void OnriggerEnter(Collision collision)
-    //{
-    //    if (collision.collider.CompareTag("PlayerBullet"))
-    //    {
-    //        Detector.SetActive(false);
-    //        Destroy(this.gameObject);
-    //    }
-    //}
 
     private void OnTriggerEnter(Collider other)
     {

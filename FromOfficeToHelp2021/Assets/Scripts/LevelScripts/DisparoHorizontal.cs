@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: CERIANI
+
 public class DisparoHorizontal : MonoBehaviour
 {
     public GameObject[] shootingPoints;

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TPFINAL: LACRUZ
+
 public class NPcOpen : MonoBehaviour
 {
     // NPC HACIA EL ELEVADOR 
